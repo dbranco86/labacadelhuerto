@@ -1,0 +1,22 @@
+#portada{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    max-width: 100%;
+    height: auto;
+    background-image: url(/imagenes/imagen-portada.jpg);
+    background-size: cover;
+    inset: 0;
+
+
+}
+.padding{
+    padding-top: 30%;
+}
+.flecha{
+    width: 3%;
+    .flecha__imagen{
+        width: 100%;
+    }
+}

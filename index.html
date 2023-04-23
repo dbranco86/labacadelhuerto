@@ -12,7 +12,7 @@
 <body>
     <!--INICIO HEADER-->
     <header>
-        <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+        <nav class="navbar navbar-expand-lg navbar__fondo" data-bs-theme="dark">
             <div class="container-fluid">
                 <div class="logo">
                     <a href="#">
@@ -40,13 +40,20 @@
                             </ul>
                         </li>
                     </ul>
-                    <ul class="navbar-nav mb-2 mb-lg-0">
+                    <ul class="navbar-nav  mb-2 mb-lg-0">
                         <li class="nav-item">
                             <a class="nav-link" href="#">Iniciar sesión</a>
-                        </li>    
-                        <li class="nav-item">
-                            <button class="btn btn-outline-success" type="submit">Carrito</button>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <img class="navbar_carrito" src="./imagenes/carrito.png" alt="">
+                            </a>
+                        </li>        
+                        <!--<li class="nav-item">
+                            <button class="btn btn-outline-success" type="submit">Carrito
+                                <img class="logo__carrito" src="./imagenes/carrito.png" alt="">
+                            </button>
+                        </li>-->
                     </ul>
                 </div>
             </div>
@@ -54,59 +61,73 @@
     </header>
     <!--INICIO MAIN-->
     <main>
-        <section>
-            <div>
-                <h1>La Baca del Huerto</h1>
-                <h2>Tablas y mesas de quesos.</h2>
-            </div>
-            <div>
-                <h3>Conoce nuestros productos</h3>
-                <div>
-                    <img src="./imagenes/flecha-hacia-abajo.png" alt="">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <section id="portada">
+                        <div class="row">
+                            <div class="col-12 padding">
+                                <h1>La Baca del Huerto</h1>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <h2>Tablas y mesas de quesos.</h2>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 padding">
+                                <h3>Conoce nuestros productos</h3>
+                            </div>
+                        </div>
+                        <div class="flecha">
+                            <img class="flecha__imagen" src="./imagenes/flecha-hacia-abajo.png" alt="">
+                        </div>
+                    </section>
                 </div>
             </div>
+        </div>   
+        <section>
+                        <div>
+                            <h2>Elije tu producto favorito</h2>
+                        </div>
+                        <nav>
+                            <ul>
+                                <li>
+                                    <a href="">Quesos</a>
+                                </li>
+                                <li>
+                                    <a href="">Tablas</a>
+                                </li>
+                            </ul>
+                        </nav>
         </section>
         <section>
-            <div>
-                <h2>Elije tu producto favorito</h2>
-            </div>
-            <nav>
-                <ul>
-                    <li>
-                        <a href="">Quesos</a>
-                    </li>
-                    <li>
-                        <a href="">Tablas</a>
-                    </li>
-                </ul>
-            </nav>
+                        <a href="">
+                            <div>
+                                <img src="" alt="">
+                            </div>
+                        </a>
+                        <a href="">
+                            <div>
+                                <img src="" alt="">
+                            </div>
+                        </a>
+                        <a href="">
+                            <div>
+                                <img src="" alt="">
+                            </div>
+                        </a>
+                        <a href="">
+                            <div>
+                                <img src="" alt="">
+                            </div>
+                        </a>
         </section>
         <section>
-            <a href="">
-                <div>
-                    <img src="" alt="">
-                </div>
-            </a>
-            <a href="">
-                <div>
-                    <img src="" alt="">
-                </div>
-            </a>
-            <a href="">
-                <div>
-                    <img src="" alt="">
-                </div>
-            </a>
-            <a href="">
-                <div>
-                    <img src="" alt="">
-                </div>
-            </a>
-        </section>
-        <section>
-            <div>
-                <img src="" alt="">
-            </div>
+                        <div>
+                            <img src="" alt="">
+                        </div>
         </section>
     </main>
     <!--INICIO FOOTER-->

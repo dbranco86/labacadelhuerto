@@ -1,12 +1,14 @@
 * {
-  margin: 0%;
-  padding: 0%; }
+  margin: 0;
+  padding: 0; }
 
 body {
   display: grid;
   grid-template-areas: "header" "main" "footer";
   grid-template-columns: auto;
   grid-template-rows: auto; }
+  body .navbar__fondo {
+    background-color: #000; }
   body .btn-outline-success {
     --bs-btn-color: #ffffff;
     --bs-btn-border-color: #ffffff;
@@ -20,3 +22,25 @@ body {
     width: 5%; }
     body .logo .logo__imagen {
       width: 100%; }
+  body .navbar_carrito {
+    width: 1.4em;
+    height: 1.4em; }
+
+#portada {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  max-width: 100%;
+  height: auto;
+  background-image: url(/imagenes/imagen-portada.jpg);
+  background-size: cover;
+  inset: 0; }
+
+.padding {
+  padding-top: 30%; }
+
+.flecha {
+  width: 3%; }
+  .flecha .flecha__imagen {
+    width: 100%; }

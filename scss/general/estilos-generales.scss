@@ -1,6 +1,6 @@
 *{
-    margin:0%;
-    padding: 0%;
+    margin:0;
+    padding: 0;
 }
 
 //Estilos utilizados para el body
@@ -15,7 +15,10 @@ body{
     grid-template-rows: auto;
 
 // Estilos para el header
-    .btn-outline-success {
+.navbar__fondo{
+    background-color: #000;
+}
+.btn-outline-success {
         --bs-btn-color: #ffffff;
         --bs-btn-border-color: #ffffff;
         --bs-btn-hover-bg: #c0aa83;
@@ -30,5 +33,9 @@ body{
         .logo__imagen{
             width: 100%;
         }
+    }
+    .navbar_carrito{
+        width: 1.4em;
+        height: 1.4em;
     }
 }
