@@ -13,46 +13,22 @@ body{
     ;
     grid-template-columns: auto;
     grid-template-rows: auto;
-}
 
-header{
+// Estilos para el header
+    .btn-outline-success {
+        --bs-btn-color: #ffffff;
+        --bs-btn-border-color: #ffffff;
+        --bs-btn-hover-bg: #c0aa83;
+        --bs-btn-hover-border-color: #c0aa83;
+        --bs-btn-active-bg: #c0aa83;
+        --bs-btn-active-border-color: #c0aa83;
+        --bs-btn-disabled-color: #c0aa83;
+        --bs-btn-disabled-border-color: #c0aa83;
+    }
     .logo{
-        display: flex;
-        flex-direction: column;
-        flex-wrap: nowrap;
-        justify-content: center;
-        width: 10%;
-        padding: 1%;
-    }
-    .logo__imagen{
-        width:100%;
-        opacity: 0.7;
-    }
-    .nav-header{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        position: fixed;
-        height: 70px;
-        width: 100vw;
-        background-color: #000;
-    }
-    .nav-header__menu{
-        display: flex;
-        flex-direction: row; 
-        width: 50%;
-        li{
-            margin: auto;
-            display: inline-block;
+        width: 5%;
+        .logo__imagen{
+            width: 100%;
         }
-        a{
-            text-decoration: none;
-            position: relative; 
-            color: white;   
-        }
-    } 
-    .nav-header__mobile{
-        display: none;
     }
 }

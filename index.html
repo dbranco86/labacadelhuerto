@@ -12,26 +12,43 @@
 <body>
     <!--INICIO HEADER-->
     <header>
-        <nav class="nav-header">
-            <div class="logo">
-                <a href=""><img class="logo__imagen" src="./imagenes/logo.png" alt=""></a>
-            </div>           
-            <ul class="nav-header__menu">
-                <li>
-                    <a href="">Inicio</a>
-                </li>
-                <li>
-                    <a href="">Iniciar Sesión</a>
-                </li>
-                <li>
-                    <a href="">Quienes somos</a>
-                </li>
-                <li>
-                    <a href="">Carrito</a>
-                </li>
-            </ul>
-            <div class="nav-header__mobile">
-                <img src="./imagenes/menu mobile.png" alt="">
+        <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+            <div class="container-fluid">
+                <div class="logo">
+                    <a href="#">
+                        <img class="logo__imagen" src="./imagenes/logo.png" alt="">
+                    </a>
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Sobre nosotros</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Nuestros Productos</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Cheesse Boxes</a></li>
+                                <li><a class="dropdown-item" href="#">Cheesse Boards</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="#">Mesas de Quesos</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Iniciar sesión</a>
+                        </li>    
+                        <li class="nav-item">
+                            <button class="btn btn-outline-success" type="submit">Carrito</button>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </nav>
     </header>
