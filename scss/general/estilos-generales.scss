@@ -14,6 +14,7 @@ body{
     ;
     grid-template-columns: auto;
     grid-template-rows: auto;
+    background-color: #f6f6f6;
 
 // Estilos para el header
 .navbar__fondo{
@@ -38,5 +39,39 @@ body{
     .navbar_carrito{
         width: 1.4em;
         height: 1.4em;
+    }
+    .sombras {
+        box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+    }
+}
+.footer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 10%;
+    max-width: 100%;
+    height: 450px;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.930));
+    h5{
+        color: white;
+        font-size: large;
+    }
+    ul{
+        list-style: none;
+        padding-left: 0;
+    }
+    li{
+        color: white;
+    }
+    .footer__info{
+        padding: 1%;
+    }
+    @media(max-width:576px){
+        flex-direction: column;
+        align-items: center;
+        .footer__info{
+            width: 214px;
+        }
     }
 }

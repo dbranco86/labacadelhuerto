@@ -9,9 +9,12 @@
     background-image: url(https://images.pexels.com/photos/7799695/pexels-photo-7799695.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
     background-size: cover;
     inset: 0;
+    @media(max-width:576px){
+    background-position: right;
+    }
 }
 .padding{
-    padding-top: 30%;
+    padding-top: 40%;
 }
 .flecha{
     width: 3%;
@@ -43,6 +46,12 @@
     flex-wrap: nowrap;
     justify-content: center;
     padding: 1.5em;
+    .card_productos{    
+        //background-color: #f6f4ef;
+        border-radius: 7px;
+        height: 433px;
+        width: 100%;
+    }
 }
 #section-4{
     display: flex;
@@ -52,29 +61,8 @@
     height: auto;
     img{
         width: 100%;
-        }
-}
-.footer{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding-top: 10%;
-    max-width: 100%;
+    }
+    @media(max-width:576px){
     height: 450px;
-    background-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.930));
-    h5{
-        color: white;
-        font-size: large;
-    }
-    ul{
-        list-style: none;
-        padding-left: 0;
-    }
-    li{
-        color: white;
-    }
-    .footer__info{
-        padding: 1%;
     }
 }

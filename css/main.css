@@ -7,7 +7,8 @@ body {
   display: grid;
   grid-template-areas: "header" "main" "footer";
   grid-template-columns: auto;
-  grid-template-rows: auto; }
+  grid-template-rows: auto;
+  background-color: #f6f6f6; }
   body .navbar__fondo {
     background-color: #000; }
   body .btn-outline-success {
@@ -26,6 +27,34 @@ body {
   body .navbar_carrito {
     width: 1.4em;
     height: 1.4em; }
+  body .sombras {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important; }
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 10%;
+  max-width: 100%;
+  height: 450px;
+  background-image: linear-gradient(to top, black, rgba(0, 0, 0, 0.93)); }
+  .footer h5 {
+    color: white;
+    font-size: large; }
+  .footer ul {
+    list-style: none;
+    padding-left: 0; }
+  .footer li {
+    color: white; }
+  .footer .footer__info {
+    padding: 1%; }
+  @media (max-width: 576px) {
+    .footer {
+      flex-direction: column;
+      align-items: center; }
+      .footer .footer__info {
+        width: 214px; } }
 
 #portada {
   display: flex;
@@ -38,9 +67,12 @@ body {
   background-image: url(https://images.pexels.com/photos/7799695/pexels-photo-7799695.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
   background-size: cover;
   inset: 0; }
+  @media (max-width: 576px) {
+    #portada {
+      background-position: right; } }
 
 .padding {
-  padding-top: 30%; }
+  padding-top: 40%; }
 
 .flecha {
   width: 3%; }
@@ -71,6 +103,10 @@ body {
   flex-wrap: nowrap;
   justify-content: center;
   padding: 1.5em; }
+  .section-card .card_productos {
+    border-radius: 7px;
+    height: 433px;
+    width: 100%; }
 
 #section-4 {
   display: flex;
@@ -80,23 +116,6 @@ body {
   height: auto; }
   #section-4 img {
     width: 100%; }
-
-.footer {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding-top: 10%;
-  max-width: 100%;
-  height: 450px;
-  background-image: linear-gradient(to top, black, rgba(0, 0, 0, 0.93)); }
-  .footer h5 {
-    color: white;
-    font-size: large; }
-  .footer ul {
-    list-style: none;
-    padding-left: 0; }
-  .footer li {
-    color: white; }
-  .footer .footer__info {
-    padding: 1%; }
+  @media (max-width: 576px) {
+    #section-4 {
+      height: 450px; } }
