@@ -1,6 +1,7 @@
 //General
-@import"./general/estilos-generales.scss";
+@import"./general/_estilos-generales.scss";
+@import"./general/_extends.scss";
 
 //Páginas
-@import"./paginas/inicio.scss";
+@import"./paginas/_inicio.scss";
 

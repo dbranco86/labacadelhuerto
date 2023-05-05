@@ -35,6 +35,9 @@ body{
         .logo__imagen{
             width: 100%;
         }
+        @media(max-width:576px){
+        width: 12.5%;
+        }
     }
     .navbar_carrito{
         width: 1.4em;
@@ -43,6 +46,7 @@ body{
     .sombras {
         box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
     }
+    
 }
 .footer{
     display: flex;
