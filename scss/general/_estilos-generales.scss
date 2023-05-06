@@ -2,7 +2,7 @@
     margin:0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    //font-family: 'Poppins', sans-serif;
 }
 
 //Estilos utilizados para el body
@@ -20,6 +20,16 @@ body{
 // Estilos para el header
 .navbar__fondo{
     background-color: #000;
+}
+.dropdown-menu {
+    --bs-body-color: #fff;
+    --bs-body-bg: #c0aa8357;
+}
+.dropdown-item:focus, .dropdown-item:hover {
+    background-color: #c0aa834f;
+}
+.navbar {
+    --bs-navbar-color: #fff;
 }
 .btn-outline-success {
         --bs-btn-color: #ffffff;
@@ -53,11 +63,12 @@ body{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-around;
     padding-top: 10%;
     max-width: 100%;
     height: 450px;
     background-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.930));
+    font-family: $tipografia;
     h5{
         color: white;
         font-size: large;

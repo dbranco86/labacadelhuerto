@@ -9,24 +9,48 @@
     background-image: url(https://images.pexels.com/photos/7799695/pexels-photo-7799695.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
     background-size: cover;
     inset: 0;
+    a{
+        text-decoration: none;;
+    }
+    h1{
+        color: #fff;
+    }
+    h2{
+        color: #fff;;
+    }
+    h3{
+        color: #fff;
+    }
     @media(max-width:576px){
     background-position: right;
     }
-}
-.padding{
-    padding-top: 40%;
-}
-.flecha{
-    width: 3%;
-    .flecha__imagen{
-        width: 100%;
+    .padding{
+        padding-top: 30%;
+    }
+    .flecha{
+        width: 3%;
+        .flecha__imagen{
+            width: 100%;
+        }
+    }
+    @media(max-width:576px){
+        padding-top: 20%;
+        .flecha{
+            width: 6%;
+        }
     }
 }
+
 #section-1{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     margin-top: 100px;
+    p{
+        color: #c0aa83;
+        font-weight: bold;
+        font-family: $tipografia;
+    }
 }
 #section-2{
     display: flex;
@@ -34,6 +58,7 @@
     justify-content: center;
     margin-top: 30px;
     font-weight: bold;
+    font-family: $tipografia;
     @media(max-width:576px){
         .nav__menu{
             display: flex;
@@ -53,6 +78,7 @@
     flex-wrap: nowrap;
     justify-content: center;
     padding: 1.5em;
+    font-family: $tipografia;;
     .card_productos{    
         //background-color: #f6f4ef;
         border-radius: 7px;
@@ -91,6 +117,7 @@
     --bs-btn-disabled-color: #fff;
     --bs-btn-disabled-bg: none;
     --bs-btn-disabled-border-color: none;
+    font-weight: bold;
 }
 .contenedor_boton{
     display: flex;

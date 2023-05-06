@@ -2,8 +2,7 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif; }
+  box-sizing: border-box; }
 
 body {
   display: grid;
@@ -13,6 +12,13 @@ body {
   background-color: #f6f6f6; }
   body .navbar__fondo {
     background-color: #000; }
+  body .dropdown-menu {
+    --bs-body-color: #fff;
+    --bs-body-bg: #c0aa8357; }
+  body .dropdown-item:focus, body .dropdown-item:hover {
+    background-color: #c0aa834f; }
+  body .navbar {
+    --bs-navbar-color: #fff; }
   body .btn-outline-success {
     --bs-btn-color: #ffffff;
     --bs-btn-border-color: #ffffff;
@@ -39,11 +45,12 @@ body {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-around;
   padding-top: 10%;
   max-width: 100%;
   height: 450px;
-  background-image: linear-gradient(to top, black, rgba(0, 0, 0, 0.93)); }
+  background-image: linear-gradient(to top, black, rgba(0, 0, 0, 0.93));
+  font-family: "Poppins", sans-serif; }
   .footer h5 {
     color: white;
     font-size: large; }
@@ -76,30 +83,46 @@ body {
   background-image: url(https://images.pexels.com/photos/7799695/pexels-photo-7799695.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
   background-size: cover;
   inset: 0; }
+  #portada a {
+    text-decoration: none; }
+  #portada h1 {
+    color: #fff; }
+  #portada h2 {
+    color: #fff; }
+  #portada h3 {
+    color: #fff; }
   @media (max-width: 576px) {
     #portada {
       background-position: right; } }
-
-.padding {
-  padding-top: 40%; }
-
-.flecha {
-  width: 3%; }
-  .flecha .flecha__imagen {
-    width: 100%; }
+  #portada .padding {
+    padding-top: 30%; }
+  #portada .flecha {
+    width: 3%; }
+    #portada .flecha .flecha__imagen {
+      width: 100%; }
+  @media (max-width: 576px) {
+    #portada {
+      padding-top: 20%; }
+      #portada .flecha {
+        width: 6%; } }
 
 #section-1 {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   margin-top: 100px; }
+  #section-1 p {
+    color: #c0aa83;
+    font-weight: bold;
+    font-family: "Poppins", sans-serif; }
 
 #section-2 {
   display: flex;
   flex-direction: row;
   justify-content: center;
   margin-top: 30px;
-  font-weight: bold; }
+  font-weight: bold;
+  font-family: "Poppins", sans-serif; }
   @media (max-width: 576px) {
     #section-2 .nav__menu {
       display: flex;
@@ -116,7 +139,8 @@ body {
   flex-direction: column;
   flex-wrap: nowrap;
   justify-content: center;
-  padding: 1.5em; }
+  padding: 1.5em;
+  font-family: "Poppins", sans-serif; }
   .section-card .card_productos {
     border-radius: 7px; }
 
@@ -150,7 +174,8 @@ body {
   --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
   --bs-btn-disabled-color: #fff;
   --bs-btn-disabled-bg: none;
-  --bs-btn-disabled-border-color: none; }
+  --bs-btn-disabled-border-color: none;
+  font-weight: bold; }
 
 .contenedor_boton {
   display: flex;
