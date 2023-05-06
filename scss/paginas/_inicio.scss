@@ -80,7 +80,6 @@
     padding: 1.5em;
     font-family: $tipografia;;
     .card_productos{    
-        //background-color: #f6f4ef;
         border-radius: 7px;
         @extend %tarjeta__producto;
     }
@@ -95,7 +94,10 @@
         width: 100%;
     }
     @media(max-width:576px){
-    height: 450px;
+    height: 620px;
+    img{
+        object-fit: cover;
+    }
     }
 }
 :root, [data-bs-theme=light]{
