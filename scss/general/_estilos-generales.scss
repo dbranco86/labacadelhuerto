@@ -54,7 +54,7 @@ body{
         .logo__imagen{
             width: 100%;
         }
-        @media(max-width:576px){
+        @media(max-width:767px){
         width: 12.5%;
         }
     }
@@ -101,7 +101,7 @@ body{
             text-decoration: none;
             --bs-link-color-rgb: #fff;
         }
-        @media(max-width:576px){
+        @media(max-width:767px){
             flex-direction: column;
             align-items: center;
             .footer__info{

@@ -39,7 +39,7 @@ body {
     width: 5%; }
     body .logo .logo__imagen {
       width: 100%; }
-    @media (max-width: 576px) {
+    @media (max-width: 767px) {
       body .logo {
         width: 12.5%; } }
   body .navbar_carrito {
@@ -75,7 +75,7 @@ body {
     .contenedor_footer .footer a {
       text-decoration: none;
       --bs-link-color-rgb: #fff; }
-    @media (max-width: 576px) {
+    @media (max-width: 767px) {
       .contenedor_footer .footer {
         flex-direction: column;
         align-items: center; }
@@ -110,7 +110,7 @@ body {
     color: #fff; }
   #portada h3 {
     color: #fff; }
-  @media (max-width: 576px) {
+  @media (max-width: 767px) {
     #portada {
       background-position: right; } }
   #portada .padding {
@@ -119,7 +119,7 @@ body {
     width: 3%; }
     #portada .flecha .flecha__imagen {
       width: 100%; }
-  @media (max-width: 576px) {
+  @media (max-width: 767px) {
     #portada {
       padding-top: 20%; }
       #portada .flecha {
@@ -142,7 +142,7 @@ body {
   margin-top: 30px;
   font-weight: bold;
   font-family: "Poppins", sans-serif; }
-  @media (max-width: 576px) {
+  @media (max-width: 767px) {
     #section-2 .nav__menu {
       display: flex;
       justify-content: center; } }
@@ -172,7 +172,7 @@ body {
   #section-4 img {
     width: 100%;
     filter: saturate(0.7); }
-  @media (max-width: 576px) {
+  @media (max-width: 767px) {
     #section-4 {
       height: 620px; }
       #section-4 img {
@@ -219,7 +219,7 @@ body {
   inset: 0; }
   #portada_productos h1 {
     color: #fff; }
-  @media (max-width: 576px) {
+  @media (max-width: 767px) {
     #portada_productos {
       background-position: right;
       padding-top: 25%; } }
@@ -240,7 +240,7 @@ a {
 
 .flex-wrap {
   padding: 3% 8% 2% 8%; }
-  @media (max-width: 576px) {
+  @media (max-width: 767px) {
     .flex-wrap {
       padding-top: 5%; } }
 
@@ -266,7 +266,7 @@ a {
 .font {
   font-family: "Poppins", sans-serif; }
 
-@media (max-width: 576px) {
+@media (max-width: 767px) {
   .h-100 {
     padding-top: 10%; }
   .align-items-center {
@@ -289,7 +289,7 @@ a {
     color: #fff; }
   #portada_carrito h2 {
     color: #fff; }
-  @media (max-width: 576px) {
+  @media (max-width: 767px) {
     #portada_carrito {
       background-position: right;
       padding-top: 15%; } }

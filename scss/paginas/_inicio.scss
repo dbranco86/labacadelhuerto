@@ -22,7 +22,7 @@
     h3{
         color: #fff;
     }
-    @media(max-width:576px){
+    @media(max-width:767px){
     background-position: right;
     }
     .padding{
@@ -34,7 +34,7 @@
             width: 100%;
         }
     }
-    @media(max-width:576px){
+    @media(max-width:767px){
         padding-top: 20%;
         .flecha{
             width: 6%;
@@ -60,7 +60,7 @@
     margin-top: 30px;
     font-weight: bold;
     font-family: $tipografia;
-    @media(max-width:576px){
+    @media(max-width:767px){
         .nav__menu{
             display: flex;
             justify-content: center;
@@ -95,7 +95,7 @@
         width: 100%;
         filter: saturate(0.7);
     }
-    @media(max-width:576px){
+    @media(max-width:767px){
     height: 620px;
     img{
         object-fit: cover;

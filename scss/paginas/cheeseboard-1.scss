@@ -14,7 +14,7 @@
     h1{
         color: #fff;
     }
-    @media(max-width:576px){
+    @media(max-width:767px){
     background-position: right;
     padding-top: 25%;;
     }
@@ -36,7 +36,7 @@ a{
 }
 .flex-wrap {
     padding: 3% 8% 2% 8%;
-    @media(max-width:576px){
+    @media(max-width:767px){
         padding-top: 5%;
     }
 }
@@ -62,7 +62,7 @@ a{
 .font{
     font-family: $tipografia;
 }
-@media(max-width:576px){
+@media(max-width:767px){
     .h-100{
         padding-top: 10%;
     }
