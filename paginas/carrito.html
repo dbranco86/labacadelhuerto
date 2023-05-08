@@ -7,7 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <!--Link para vincular css-->
     <link rel="stylesheet" href="../css/main.css">
-    <title>Cheeseboard n°1 - La Baca del Huerto</title>
+    <title>Carrito - La Baca del Huerto</title>
 </head>
 <body>
     <!--INICIO HEADER-->
@@ -48,7 +48,7 @@
                                         <a class="nav-link" href="#">Iniciar sesión</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="./carrito.html">
+                                        <a class="nav-link" href="../paginas/carrito.html">
                                             <img class="navbar_carrito" src="../imagenes/carrito.png" alt="">
                                         </a>
                                     </li>        
@@ -65,10 +65,13 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-12">
-                    <section id="portada_productos">
+                    <section id="portada_carrito">
                         <div class="row">
                             <div class="col-12 padding">
-                                <h1 class=" display-3 fw-bold text-center hero-title">Cheese Boards</h1>
+                                <h1 class=" display-3 fw-bold text-center hero-title">La Baca del Huerto</h1>
+                            </div>
+                            <div class="col-12 padding">
+                                <h2 class=" display-3 fw-bold text-center hero-title">Carrito</h2>
                             </div>
                         </div>
                     </section>
@@ -79,37 +82,70 @@
             <div class="row">
                 <div class="col-12">
                     <div class="contenedor_carrito">
-                        <div class="color-bg row  flex-wrap">
-                            <div class="col-md-4 color-bg d-flex flex-column">
-                                <div class="img">
-                                    <img class="sombras" src="../imagenes/Quesos1.jpg" alt="">
-                                </div>
-                                <div role="button">
-                                    <a href="../index.html">
-                                        <img class="flecha_atras" src="../imagenes/flecha-atras.png" alt="">
-                                    </a>
-                                    <span class="fw-bold font">Continuar comprando</span> 
+                        <div class="container mt-5">
+                            <table class="table">
+                                <thead>
+                                    <tr class="text-white border-bottom-none">
+                                        <th scope="col"></th>
+                                        <th scope="col">Producto</th>
+                                        <th scope="col">Precio</th>
+                                        <th scope="col text-center">Cantidad</th>
+                                        <th scope="col text-center">Stock</th>
+                                        <th scope="col">Eliminar</th>
+                                        <th scope="col">Subtotal</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="align-middle">
+                                            <img src="../imagenes/Quesos1-carrito.png" alt="Producto" class="tamaño-imagen">
+                                        </td>
+                                        <td class="align-middle">Cheese Box n°1</td>
+                                        <td class="align-middle">
+                                            "USD"
+                                            "10"
+                                            <span class= "d-none">
+                                                "10"
+                                                "10"
+                                            </span>
+                                        </td>
+                                        <td>
+                                            <div class="d-flex">
+                                                <button class="btn btn-outline-secondary mt-auto mb-auto">-</button>
+                                                <p class="ms-3 me-3 m-auto">1</p>
+                                                <button class="btn btn-outline-secondary mt-auto mb-auto">+</button>
+                                            </div>
+                                        </td>
+                                        <td class="ps-4 align-middle">10</td>
+                                        <td>
+                                            <button class="btn rounded-pill mb-2 ps-4 align-middle">
+                                                <img class="imagen_carrito" src="../imagenes/boton_eliminar.png" alt="">
+                                            </button>
+                                        </td>
+                                        <td class="ps-4 align-middle">
+                                            "10"
+                                            <span class="d-none">0</span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <hr class="w-25 ms-auto mt-5 hr-style">
+                            <hr class="w-25 ms-auto border-bottom border-5 bg-dark mt-4 hr-style">
+                            <div class="payment-checkout w-100">
+                                <div class="d-flex justify-content-end fw-bold">
+                                    <p class="d-inline me-5">Total:</p>
+                                    <span>
+                                        "USD"
+                                        "10"
+                                    </span>
                                 </div>
                             </div>
-                            <div class="col-md-8 color-bg buy-div h-100">
-                                <h3 class="font">Cheeseboard n°1</h3>
-                                <div>
-                                    <h4 class="fw-bold font">
-                                        Descripción
-                                    </h4>
-                                    <p class="description-text fw-bold font">
-                                        Elaboradas con Colombian Decaff. Tratado para remover la cafeína permitiendo al café, conservar su cuerpo aroma y sabor.
-                                    </p>
-                                    <div class="align-items-center">
-                                        <div class="d-flex">
-                                            <button class="btn btn-outline-secondary mt-auto mb-auto">-</button>
-                                            <input type="number" class="product-input align-items-center">
-                                            <button class="btn btn-outline-secondary mt-auto mb-auto">+</button>
-                                            <button class="btn btn-secondary secondary-color-bg text-white fw-bold my-2 ms-4 font">Añadir al carrito</button>
-                                        </div>
-                                        <span class="fw-bold me-2 d-block fs-5 mt-3 font">Precio: </span>
-                                    </div>
-                                </div>
+                            <button class="card-button btn btn-secondary text-white fw-bold d-block ms-auto me-4">Pagar</button>
+                            <div class="mb-4">
+                                <a href="../index.html" class="text-decoration-none text-dark mt-5">
+                                    <img class="flecha_atras_carrito" src="../imagenes/flecha-atras.png" alt="">
+                                    <span class="fw-bold font">Continuar comprando</span>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -135,7 +171,7 @@
                                 <h5>Enlaces</h5>
                                 <ul>
                                     <li>
-                                        <a href="../index.html">Inicio</a>
+                                        <a href="">Inicio</a>
                                     </li>
                                     <li>
                                         <a href="">Iniciar Sesión</a>
@@ -144,7 +180,7 @@
                                         <a href="">Quienes somos</a>
                                     </li>
                                     <li>
-                                        <a href="../paginas/carrito.html">Carrito</a>
+                                        <a href="">Carrito</a>
                                     </li>
                                 </ul>
                             </div>

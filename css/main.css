@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
 * {
   margin: 0;
@@ -14,9 +15,9 @@ body {
     background-color: #000; }
   body .dropdown-menu {
     --bs-body-color: #fff;
-    --bs-body-bg: #c0aa8357;
-    --bs-dropdown-link-active-bg: #0000004d
-; }
+    --bs-body-bg: #a89c8bc4;
+    --bs-dropdown-link-active-bg: #0000004d;
+    --bs-primary-border-subtle: #0000004d; }
   body .dropdown-item:focus, body .dropdown-item:hover {
     background-color: #c0aa834f; }
   body .navbar {
@@ -229,6 +230,9 @@ h3 {
 .flecha_atras {
   width: 15%; }
 
+a {
+  text-decoration: none; }
+
 .img {
   width: 100%; }
   .img img {
@@ -267,3 +271,46 @@ h3 {
     padding-top: 10%; }
   .align-items-center {
     padding-bottom: 10%; } }
+
+#portada_carrito {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  max-width: 100%;
+  padding: 6%;
+  height: 250px;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url(https://images.unsplash.com/photo-1452195100486-9cc805987862?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=869&q=80);
+  background-position: initial;
+  background-size: cover;
+  filter: saturate(0.8);
+  inset: 0; }
+  #portada_carrito h1 {
+    color: #fff; }
+  #portada_carrito h2 {
+    color: #fff; }
+  @media (max-width: 576px) {
+    #portada_carrito {
+      background-position: right;
+      padding-top: 15%; } }
+
+.tamaño-imagen {
+  width: 100%; }
+
+.imagen_carrito {
+  height: 20px; }
+
+thead {
+  background-color: #a89c8b;
+  border-bottom: 2px solid black; }
+
+td {
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  vertical-align: middle; }
+
+hr {
+  opacity: 0.1; }
+
+.flecha_atras_carrito {
+  width: 5%; }
