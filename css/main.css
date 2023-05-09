@@ -158,7 +158,6 @@ body {
   flex-direction: column;
   flex-wrap: nowrap;
   justify-content: center;
-  padding: 1.5em;
   font-family: "Poppins", sans-serif; }
   .section-card .card_productos {
     border-radius: 7px; }
