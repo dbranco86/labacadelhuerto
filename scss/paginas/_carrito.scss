@@ -23,8 +23,13 @@
     }
 }
 .contenedor_carrito{
-    display: flex;
-    flex-direction: row;
+    //display: flex;
+    //flex//-direction: row;
+    overflow-x: auto;
+    white-space: nowrap;
+    //@media//(max-width:767px){
+    //    fl//ex-direction: column;
+    //}
 }
 .tamaño-imagen{
     width: 100%;
