@@ -26,7 +26,29 @@
     .container{
         max-width: 340px;
     }
-    
+    table{
+        width: 100%;
+    }
+    table tr{
+        display: flex;
+        flex-direction: column;
+        border: 1px solid #AA9D8C;
+        padding: 1%;
+    }
+    table td[data-titulo]{
+        display: flex;
+    }
+    table td[data-titulo]::before{
+        content: attr(data-titulo);
+        width: 150px;
+        font-weight: bold;
+    }
+    table thead{
+        display: none;
+    }
+    :root, [data-bs-theme=light]{
+        --bs-border-width: 0;  
+    }
 }
 .imagen_carrito{
     height: 20px;

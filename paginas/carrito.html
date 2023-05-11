@@ -90,7 +90,6 @@
                                         <th scope="col">Producto</th>
                                         <th scope="col">Precio</th>
                                         <th scope="col text-center">Cantidad</th>
-                                        <th scope="col text-center">Stock</th>
                                         <th scope="col">Eliminar</th>
                                         <th scope="col">Subtotal</th>
                                     </tr>
@@ -100,8 +99,8 @@
                                         <td class="align-middle">
                                             <img src="../imagenes/Quesos1-carrito.png" alt="Producto">
                                         </td>
-                                        <td class="align-middle">Cheese Box n°1</td>
-                                        <td class="align-middle">
+                                        <td data-titulo = "Producto" class="align-middle">Cheese Box n°1</td>
+                                        <td data-titulo = "Precio" class="align-middle">
                                             "USD"
                                             "10"
                                             <span class= "d-none">
@@ -109,20 +108,19 @@
                                                 "10"
                                             </span>
                                         </td>
-                                        <td>
+                                        <td data-titulo = "Cantidad">
                                             <div class="d-flex">
                                                 <button class="btn btn-outline-secondary mt-auto mb-auto">-</button>
                                                 <p class="ms-3 me-3 m-auto">1</p>
                                                 <button class="btn btn-outline-secondary mt-auto mb-auto">+</button>
                                             </div>
                                         </td>
-                                        <td class="ps-4 align-middle">10</td>
-                                        <td>
+                                        <td data-titulo = "Eliminar">
                                             <button class="btn rounded-pill mb-2 ps-4 align-middle">
                                                 <img class="imagen_carrito" src="../imagenes/boton_eliminar.png" alt="">
                                             </button>
                                         </td>
-                                        <td class="ps-4 align-middle">
+                                        <td data-titulo = "Subtotal" class="ps-4 align-middle">
                                             "10"
                                             <span class="d-none">0</span>
                                         </td>
