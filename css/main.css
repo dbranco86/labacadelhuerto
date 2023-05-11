@@ -294,8 +294,13 @@ a {
       padding-top: 15%; } }
 
 .contenedor_carrito {
-  overflow-x: auto;
-  white-space: nowrap; }
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  width: auto;
+  height: auto;
+  overflow-x: hidden; }
 
 .tamaño-imagen {
   width: 100%; }
