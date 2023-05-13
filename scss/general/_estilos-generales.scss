@@ -113,4 +113,10 @@ body{
     p{
         color: #f5deb33b;
     }
+    .img_sociales{
+        width: 12%;
+        @media(max-width:767px){
+            width:  10%;
+        }
+    }
 }

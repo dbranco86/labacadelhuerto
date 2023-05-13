@@ -84,6 +84,11 @@ body {
     color: #f5deb375; }
   .contenedor_footer p {
     color: #f5deb33b; }
+  .contenedor_footer .img_sociales {
+    width: 12%; }
+    @media (max-width: 767px) {
+      .contenedor_footer .img_sociales {
+        width: 10%; } }
 
 .section-card .card_productos {
   padding: 24px 24px;
