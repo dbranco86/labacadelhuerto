@@ -316,7 +316,11 @@ a {
   table thead {
     display: none; }
   :root, [data-bs-theme=light] {
-    --bs-border-width: 0; } }
+    --bs-border-width: 0; }
+  .btn-outline-secondary {
+    --bs-btn-hover-bg: #AA9D8C;
+    --bs-btn-active-bg: #795f34;
+    border: solid 1px #6c757d; } }
 
 .imagen_carrito {
   height: 20px; }
