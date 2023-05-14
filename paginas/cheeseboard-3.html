@@ -8,7 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <!--Link para vincular css-->
     <link rel="stylesheet" href="../css/main.css">
-    <title>Mesas de Quesos - La Baca del Huerto</title>
+    <title>Cheeseboard n°3 - La Baca del Huerto</title>
 </head>
 <body>
     <!--INICIO HEADER-->
@@ -19,7 +19,7 @@
                     <nav class="navbar navbar-expand-lg navbar__fondo" data-bs-theme="dark">
                         <div class="container-fluid">
                             <div class="logo">
-                                <a href="./index.html">
+                                <a href="../index.html">
                                     <img class="logo__imagen" src="../imagenes/logo.png" alt="">
                                 </a>
                             </div>
@@ -49,7 +49,7 @@
                                         <a class="nav-link" href="#">Iniciar sesión</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="../paginas/carrito.html">
+                                        <a class="nav-link" href="./carrito.html">
                                             <img class="navbar_carrito" src="../imagenes/carrito.png" alt="">
                                         </a>
                                     </li>        
@@ -66,118 +66,57 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-12">
-                    <section id="portada">
+                    <section id="portada_productos">
                         <div class="row">
                             <div class="col-12 padding">
-                                <h1 class=" display-3 fw-bold text-center hero-title">La Baca del Huerto</h1>
+                                <h1 class=" display-3 fw-bold text-center hero-title">Cheese Boards</h1>
                             </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-12">
-                                <h2 class=" text-center mb-4 hero-title fs-3">Tablas y mesas de quesos.</h2>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-12 padding">
-                                <a href="#section-1">
-                                    <h3 class=" text-center mb-4 hero-title fs-3">Conoce nuestros productos</h3>
-                                </a>
-                            </div>    
-                        </div>
-                        <div class="flecha">
-                            <a href="#section-1">
-                            <img class="flecha__imagen" src="../imagenes/flecha-abajo.png" alt="">
-                            </a>
                         </div>
                     </section>
                 </div>
             </div>
-        </div>   
-        <section id="section-1">
-            <p class="lead mb-4 text-center fs-5 subtitle-1">Productos de La Baca del Huerto </p>    
-            <h2 class=" display-3 fw-bold text-center fs-1 mb-5">ELIGE TU PRODUCTO FAVORITO</h2>
-        </section>
-        <section id="section-2">    
-            <ul class="nav nav-tabs nav__menu">
-                <li class="nav-item">
-                    <a class="nav-link" href="../index.html">Cheese Boards</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="../paginas/cheeseboxes.html">Cheese Boxes</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="../paginas/mesas-de-quesos.html">Mesas de Quesos</a>
-                </li>
-                </ul>
-        </section>    
-        <!--TARJETAS PRODUCTOS-->
+        </div>
         <div class="container-fluid">
             <div class="row">
                 <div class="col-12">
-                    <section id="section-3">
-                        <div class="section-card">                         
-                            <div class="card card_productos sombras tarjeta__producto"  style="width: 18rem;">
-                                <a href="#">
-                                    <img src="../imagenes/Quesos1.jpg" class="card-img-top" alt="...">    
-                                </a>
-                                <div class="card-body text-center">
-                                    <h5 class="tarjeta_titulo">Mesa de Quesos n°1</h5>
-                                    <p class="tarjeta_texto">Precio: s/ 100</p>
+                    <div class="contenedor_carrito">
+                        <div class="color-bg row  flex-wrap">
+                            <div class="col-md-4 color-bg d-flex flex-column">
+                                <div class="img">
+                                    <img class="sombras" src="../imagenes/Quesos3.jpg" alt="">
                                 </div>
-                                <div class="contenedor_boton">
-                                    <button class="card-button btn btn-secondary">Añadir al carrito</button>
+                                <div role="button">
+                                    <a href="../index.html">
+                                        <img class="flecha_atras" src="../imagenes/flecha-atras.png" alt="">
+                                    </a>
+                                    <span class="fw-bold font">Continuar comprando</span> 
+                                </div>
+                            </div>
+                            <div class="col-md-8 color-bg buy-div h-100">
+                                <h3 class="font tarjeta_titulo">Cheeseboard n°3</h3>
+                                <div>
+                                    <h4 class="fw-bold font">
+                                        Descripción
+                                    </h4>
+                                    <p class="description-text fw-bold font">
+                                        Elaboradas con Colombian Decaff. Tratado para remover la cafeína permitiendo al café, conservar su cuerpo aroma y sabor.
+                                    </p>
+                                    <div class="align-items-center">
+                                        <div class="d-flex">
+                                            <button class="btn btn-outline-secondary mt-auto mb-auto">-</button>
+                                            <input type="number" class="product-input align-items-center">
+                                            <button class="btn btn-outline-secondary mt-auto mb-auto">+</button>
+                                            <button class="btn btn-secondary secondary-color-bg text-white fw-bold my-2 ms-4 font">Añadir al carrito</button>
+                                        </div>
+                                        <span class="fw-bold me-2 d-block fs-5 mt-3 font tarjeta_titulo">Precio: </span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="section-card">
-                            <div class="card card_productos sombras" style="width: 18rem;">
-                                <img src="../imagenes/Quesos2.jpg" class="card-img-top" alt="...">
-                                <div class="card-body text-center">
-                                    <h5 class="tarjeta_titulo">Mesa de Quesos n°2</h5>
-                                    <p class="tarjeta_texto">Precio: s/ 200</p>
-                                </div>
-                                <div class="contenedor_boton">
-                                    <button class="card-button btn btn-secondary">Añadir al carrito</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="section-card">
-                            <div class="card card_productos sombras" style="width: 18rem;">
-                                <img src="../imagenes/Quesos3.jpg" class="card-img-top" alt="...">
-                                <div class="card-body text-center">
-                                    <h5 class="tarjeta_titulo">Mesa de Quesos n°3</h5>
-                                    <p class="tarjeta_texto">Precio: s/ 300</p>
-                                </div>
-                                <div class="contenedor_boton">
-                                    <button class="card-button btn btn-secondary">Añadir al carrito</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="section-card">
-                            <div class="card card_productos sombras" style="width: 18rem;">
-                                <img src="../imagenes/Quesos4.jpg" class="card-img-top" alt="...">
-                                <div class="card-body text-center">
-                                    <h5 class="tarjeta_titulo">Mesa de Quesos n°4</h5>
-                                    <p class="tarjeta_texto">Precio: s/ 400</p>
-                                </div>
-                                <div class="contenedor_boton">
-                                    <button class="card-button btn btn-secondary">Añadir al carrito</button>
-                                </div>
-                            </div>
-                        </div> 
-                    </section>     
+                    </div>
                 </div>
             </div>
-        </div>    
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-12">
-                    <section id="section-4">
-                        <img src="../imagenes/quesos.jpg" alt="">
-                    </section>
-                </div>
-            </div>
-        </div>                    
+        </div>                                      
     </main>
     <!--INICIO FOOTER-->
     <footer>
@@ -189,12 +128,8 @@
                             <div class="footer__info">
                                 <h5>Contacto</h5>
                                 <ul>
-                                    <li>
-                                        <a href="">labacadelhuerto@hotmail.com</a> 
-                                    </li>
-                                    <li>
-                                        <a href="">980 067 352</a>
-                                    </li>
+                                    <li>labacadelhuerto@hotmail.com</li>
+                                    <li>980 067 352</li>
                                 </ul>
                             </div>
                             <div class="footer__info">

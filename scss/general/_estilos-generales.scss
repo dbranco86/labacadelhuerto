@@ -15,6 +15,14 @@ body{
     grid-template-rows: auto;
     background-color: #f6f6f6;
 
+    .tarjeta_titulo{
+        color: #55524d;
+        font-weight: 800;
+    }
+    .tarjeta_texto{
+        color: #aa9d8c;
+        font-weight: 800;
+    }
 // Estilos para el header
 .navbar__fondo{
     background-color: #000;
