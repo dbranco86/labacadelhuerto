@@ -72,13 +72,14 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    margin-top: 2%;
 }
 .section-card{
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
     justify-content: center;
-    font-family: $tipografia;;
+    font-family: $tipografia;
     .card_productos{    
         border-radius: 7px;
         @extend %tarjeta__producto;
