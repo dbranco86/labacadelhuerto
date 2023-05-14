@@ -6,7 +6,7 @@
     max-width: 100%;
     height: 620px;
     padding: 0, ;
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url(https://images.pexels.com/photos/7799695/pexels-photo-7799695.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url(/imagenes/portada.jpeg);
     background-size: cover;
     filter: saturate(0.8);
     inset: 0;
@@ -90,16 +90,14 @@
     flex-direction: row;
     flex-wrap: wrap;
     max-width: 100%;
-    height: auto;
-    img{
-        width: 100%;
-        filter: saturate(0.7);
-    }
+    //background-image:linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url(/imagenes/quesos.jpg);
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2),rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.9)), url(/imagenes/quesos.jpg);
+    background-size: cover;
+    height: 760px;
+    background-position: center;
+    filter: saturate(0.8);
     @media(max-width:767px){
-    height: 620px;
-    img{
-        object-fit: cover;
-    }
+    height: 624px;
     }
 }
 :root, [data-bs-theme=light]{
