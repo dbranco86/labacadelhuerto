@@ -81,7 +81,6 @@ body{
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-around;
-        padding-top: 10%;
         max-width: 100%;
         background-color: black;
         font-family: $tipografia;
@@ -108,6 +107,7 @@ body{
         @media(max-width:767px){
             flex-direction: column;
             align-items: center;
+            padding-top: 10%;
             .footer__info{
                 width: 214px;
             }
