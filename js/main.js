@@ -220,6 +220,7 @@ productos.forEach((tabla, index) =>{
         })
     }
 }); 
+
 // CREANDO ESTRUCTURA DEL CARRITO
 verCarrito.addEventListener("click", () =>{
     carrito.forEach((tabla) =>{
