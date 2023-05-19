@@ -51,9 +51,10 @@
                                         <a class="nav-link" href="#">Iniciar sesión</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="./paginas/carrito.html">
-                                            <img class="navbar_carrito" src="./imagenes/carrito.png" alt="">
-                                        </a>
+                                        <!--<a class="nav-link" href="./paginas/carrito.html">
+                                            <img class="navbar_carrito" id="verCarrito" src="./imagenes/carrito.png" alt="">
+                                        </a>-->
+                                        <img class="navbar_carrito" id="verCarrito" src="./imagenes/carrito.png" alt="">
                                     </li>        
                                 </ul>
                             </div>
@@ -115,19 +116,15 @@
         <!--TARJETAS PRODUCTOS-->
         <div class="container-fluid">
             <div class="row">
-                <div class="col-12">
+                <div class="col-12 ">
+                    <div id="contenidoCarrito">
                     <section id="section-3">
                         <div class="section-card">                         
                             <div class="card card_productos sombras tarjeta__producto" style="width: 18rem;">
                                 <a href="./paginas/cheeseboard-1.html">
                                     <img src="./imagenes/Quesos1.jpg" class="card-img-top" alt="...">    
                                 </a>
-                                    <div class="card-body text-center" id="cheeseboard_1">
-                                        <!--<h5 class="tarjeta_titulo">Cheese Board n°1</h5>
-                                        <p class="tarjeta_texto">Precio: s/ 100</p>-->
-                                    </div>
-                                <div class="contenedor_boton" id="anadir_carrito">
-                                    <!--<button class="card-button btn btn-secondary">Añadir al carrito</button>-->
+                                <div class="card-body text-center" id="cheeseboard_1">
                                 </div>
                             </div>
                         </div>
@@ -137,11 +134,6 @@
                                     <img src="./imagenes/Quesos2.jpg" class="card-img-top" alt="...">
                                 </a>
                                 <div class="card-body text-center" id="cheeseboard_2">
-                                    <!--<h5 class="tarjeta_titulo">Cheese Board n°2</h5>
-                                    <p class="tarjeta_texto">Precio: s/ 200</p>-->
-                                </div>
-                                <div class="contenedor_boton" id="anadir_carrito">
-                                    <!--<button class="card-button btn btn-secondary">Añadir al carrito</button>-->
                                 </div>
                             </div>
                         </div>
@@ -151,11 +143,6 @@
                                     <img src="./imagenes/Quesos3.jpg" class="card-img-top" alt="...">
                                 </a>
                                 <div class="card-body text-center" id="cheeseboard_3">
-                                    <!--<h5 class="tarjeta_titulo">Cheese Board n°3</h5>
-                                    <p class="tarjeta_texto">Precio: s/ 300</p>-->
-                                </div>
-                                <div class="contenedor_boton" id="anadir_carrito">
-                                    <!--<button class="card-button btn btn-secondary">Añadir al carrito</button>-->
                                 </div>
                             </div>
                         </div>
@@ -165,15 +152,11 @@
                                     <img src="./imagenes/Quesos4.jpg" class="card-img-top" alt="...">
                                 </a>
                                 <div class="card-body" id="cheeseboard_4">
-                                    <!--<h5 class="tarjeta_titulo">Cheese Board n°4</h5>
-                                    <p class="tarjeta_texto">Precio: s/ 400</p>-->
-                                </div>
-                                <div class="contenedor_boton" id="anadir_carrito">
-                                    <!--<button class="card-button btn btn-secondary">Añadir al carrito</button>-->
                                 </div>
                             </div>
                         </div> 
-                    </section>     
+                    </section>
+                    </div>     
                 </div>
             </div>
         </div>    

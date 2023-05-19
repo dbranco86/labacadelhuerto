@@ -342,3 +342,6 @@ hr {
 
 .flecha_atras_carrito {
   width: 5%; }
+  @media (max-width: 767px) {
+    .flecha_atras_carrito {
+      width: 10%; } }
