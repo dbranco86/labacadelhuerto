@@ -32,7 +32,7 @@
     table tr{
         display: flex;
         flex-direction: column;
-        border: 1px solid #AA9D8C;
+        border-bottom: 1px solid #AA9D8C;
         padding: 1%;
     }
     table td[data-titulo]{
@@ -76,5 +76,7 @@ hr{
         width: 10%;
     }
 }
-
+.btn:first-child:active{
+    border-color: transparent;
+}
         

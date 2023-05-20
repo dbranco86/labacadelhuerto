@@ -318,7 +318,7 @@ a {
   table tr {
     display: flex;
     flex-direction: column;
-    border: 1px solid #AA9D8C;
+    border-bottom: 1px solid #AA9D8C;
     padding: 1%; }
   table td[data-titulo] {
     display: flex; }
@@ -355,3 +355,6 @@ hr {
   @media (max-width: 767px) {
     .flecha_atras_carrito {
       width: 10%; } }
+
+.btn:first-child:active {
+  border-color: transparent; }

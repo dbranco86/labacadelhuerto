@@ -115,17 +115,21 @@ alert ("Gracias por su vista, lo esperamos pronto!");
 
 //CONSTRUCTOR DE OBJETOS
 class Producto {
-    constructor(nombre, precio) {
+    constructor(id, nombre, precio, cantidad, imagen, total) {
+        this.id = Number(id);
         this.nombre  = nombre;
         this.precio  = Number (precio);
+        this.cantidad = Number (cantidad);
+        this.imagen = imagen;
+        this.total = total;
     }
 }
 
 //CREO OBJETOS
-const PRODUCTO_1 = new Producto ("Cheese Board n°1", "100");
-const PRODUCTO_2 = new Producto ("Cheese Board n°2", "200"); 
-const PRODUCTO_3 = new Producto ("Cheese Board n°3", "300");
-const PRODUCTO_4 = new Producto ("Cheese Board n°4", "400");
+const PRODUCTO_1 = new Producto ("1", "Cheese Board n°1", "100", "1", "../imagenes/Quesos1-carrito.png", "200");
+const PRODUCTO_2 = new Producto ("2", "Cheese Board n°2", "200", "1", "../imagenes/Quesos2-carrito.png", "200"); 
+const PRODUCTO_3 = new Producto ("3", "Cheese Board n°3", "300", "1", "../imagenes/Quesos3-carrito.png", "300");
+const PRODUCTO_4 = new Producto ("4", "Cheese Board n°4", "400", "1", "../imagenes/Quesos4-carrito.png", "400");
 
 //CREO ARRAY DE PRODUCTOS
 const productos = [
@@ -162,10 +166,28 @@ productos.forEach((tabla, index) =>{
     boton_anadir.className = "card-button btn btn-secondary";
     cheeseboard_1.append(boton_anadir);
     boton_anadir.addEventListener("click", () => {
-        carrito.push({
-            nombre: tabla.nombre,
-            precio: tabla.precio,
-        });
+        const existe = carrito.some(producto => producto.nombre === tabla.nombre)
+        if (existe){
+            const productos = carrito.map(producto =>{
+                if (producto.nombre === tabla.nombre){
+                    producto.cantidad++;
+                    producto.total = producto.precio * producto.cantidad;
+                    return producto
+                }else{
+                    return producto
+                }
+            });
+            carrito = [...productos]
+        }else{
+            carrito.push({
+                id: tabla.id,
+                nombre: tabla.nombre,
+                precio: tabla.precio,
+                cantidad: tabla.cantidad,
+                total: tabla.precio * tabla.cantidad,
+                imagen: tabla.imagen
+            });  
+        }
     })
     }else if (index === 1){
         let contenido = document.createElement("div");
@@ -179,10 +201,28 @@ productos.forEach((tabla, index) =>{
         boton_anadir.className = "card-button btn btn-secondary";
         cheeseboard_2.append(boton_anadir);
         boton_anadir.addEventListener("click", () => {
+            const existe = carrito.some(producto => producto.nombre === tabla.nombre)
+        if (existe){
+            const productos = carrito.map(producto =>{
+                if (producto.nombre === tabla.nombre){
+                    producto.cantidad++;
+                    producto.total = producto.precio * producto.cantidad;
+                    return producto
+                }else{
+                    return producto
+                }
+            });
+            carrito = [...productos]
+        }else{
             carrito.push({
+                id: tabla.id,
                 nombre: tabla.nombre,
                 precio: tabla.precio,
-            });
+                cantidad: tabla.cantidad,
+                total: tabla.precio * tabla.cantidad,
+                imagen: tabla.imagen
+            });  
+        }
         })
     }else if (index === 2){
         let contenido = document.createElement("div");
@@ -196,10 +236,28 @@ productos.forEach((tabla, index) =>{
         boton_anadir.className = "card-button btn btn-secondary";
         cheeseboard_3.append(boton_anadir);
         boton_anadir.addEventListener("click", () => {
+            const existe = carrito.some(producto => producto.nombre === tabla.nombre)
+        if (existe){
+            const productos = carrito.map(producto =>{
+                if (producto.nombre === tabla.nombre){
+                    producto.cantidad++;
+                    producto.total = producto.precio * producto.cantidad;
+                    return producto
+                }else{
+                    return producto
+                }
+            });
+            carrito = [...productos]
+        }else{
             carrito.push({
+                id: tabla.id,
                 nombre: tabla.nombre,
                 precio: tabla.precio,
-            });
+                cantidad: tabla.cantidad,
+                total: tabla.precio * tabla.cantidad,
+                imagen: tabla.imagen
+            });  
+        }
         })
     }else if (index === 3){
         let contenido = document.createElement("div");
@@ -213,16 +271,35 @@ productos.forEach((tabla, index) =>{
         boton_anadir.className = "card-button btn btn-secondary";
         cheeseboard_4.append(boton_anadir);
         boton_anadir.addEventListener("click", () => {
+            const existe = carrito.some(producto => producto.nombre === tabla.nombre)
+        if (existe){
+            const productos = carrito.map(producto =>{
+                if (producto.nombre === tabla.nombre){
+                    producto.cantidad++;
+                    producto.total = producto.precio * producto.cantidad;
+                    return producto
+                }else{
+                    return producto
+                }
+            });
+            carrito = [...productos]
+        }else{
             carrito.push({
+                id: tabla.id,
                 nombre: tabla.nombre,
                 precio: tabla.precio,
-            });
+                cantidad: tabla.cantidad,
+                total: tabla.precio * tabla.cantidad,
+                imagen: tabla.imagen
+            });  
+        }
         })
     }
 }); 
 
 // CREANDO ESTRUCTURA DEL CARRITO
 verCarrito.addEventListener("click", () =>{
+    
     carrito.forEach((tabla) =>{
         let contenido_carrito = document.createElement ("div");
         contenido_carrito.className = "container mt-5 table-responsive";
@@ -241,7 +318,7 @@ verCarrito.addEventListener("click", () =>{
         <tbody>
         <tr>
         <td class="align-middle">
-        <img src="../imagenes/Quesos1-carrito.png" alt="Producto">
+        <img src="${tabla.imagen}" alt="Producto">
         </td>
         <td data-titulo = "Producto" class="align-middle">${tabla.nombre}</td>
         <td data-titulo = "Precio" class="align-middle">
@@ -250,9 +327,9 @@ verCarrito.addEventListener("click", () =>{
         </td>
         <td data-titulo = "Cantidad">
         <div class="d-flex">
-        <button class="btn btn-outline-secondary mt-auto mb-auto">-</button>
-        <p class="ms-3 me-3 m-auto">1</p>
-        <button class="btn btn-outline-secondary mt-auto mb-auto">+</button>
+        <button class="btn btn-outline-secondary mt-auto mb-auto" id="botonRestar">-</button>
+        <p class="ms-3 me-3 m-auto">${tabla.cantidad}</p>
+        <button class="btn btn-outline-secondary mt-auto mb-auto" id="botonAgregar${tabla.id}">+</button>
         </div>
         </td>
         <td data-titulo = "Eliminar">
@@ -261,7 +338,7 @@ verCarrito.addEventListener("click", () =>{
         </button>
         </td>
         <td data-titulo = "Subtotal" class="ps-4 align-middle">
-        ${tabla.precio}
+        ${tabla.total}
         <span class="d-none">0</span>
         </td>
         </tr>
@@ -270,8 +347,9 @@ verCarrito.addEventListener("click", () =>{
         `;
         contenidoCarrito.append(contenido_carrito);
     });
+    
     //CREANDO FUNCION PARA CALCULAR EL TOTAL DE LA COMPRA
-    const totalCompra = carrito.reduce((a, b) => a +b.precio, 0);
+    const totalCompra = carrito.reduce((a, b) => a +b.total, 0);
     const totalPagar = document.createElement ("div");
     totalPagar.className = ("container");
     totalPagar.innerHTML = `
