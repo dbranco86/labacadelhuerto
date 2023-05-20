@@ -126,10 +126,10 @@ class Producto {
 }
 
 //CREO OBJETOS
-const PRODUCTO_1 = new Producto ("1", "Cheese Board n°1", "100", "1", "../imagenes/Quesos1-carrito.png", "200");
-const PRODUCTO_2 = new Producto ("2", "Cheese Board n°2", "200", "1", "../imagenes/Quesos2-carrito.png", "200"); 
-const PRODUCTO_3 = new Producto ("3", "Cheese Board n°3", "300", "1", "../imagenes/Quesos3-carrito.png", "300");
-const PRODUCTO_4 = new Producto ("4", "Cheese Board n°4", "400", "1", "../imagenes/Quesos4-carrito.png", "400");
+const PRODUCTO_1 = new Producto ("1", "Cheese Board n°1", "100", "1", "./imagenes/Quesos1-carrito.png", "200");
+const PRODUCTO_2 = new Producto ("2", "Cheese Board n°2", "200", "1", "./imagenes/Quesos2-carrito.png", "200"); 
+const PRODUCTO_3 = new Producto ("3", "Cheese Board n°3", "300", "1", "./imagenes/Quesos3-carrito.png", "300");
+const PRODUCTO_4 = new Producto ("4", "Cheese Board n°4", "400", "1", "./imagenes/Quesos4-carrito.png", "400");
 
 //CREO ARRAY DE PRODUCTOS
 const productos = [
@@ -334,7 +334,7 @@ verCarrito.addEventListener("click", () =>{
         </td>
         <td data-titulo = "Eliminar">
         <button class="btn rounded-pill mb-2 ps-4 align-middle">
-        <img class="imagen_carrito" src="../imagenes/boton_eliminar.png" alt="">
+        <img class="imagen_carrito" src="./imagenes/boton_eliminar.png" alt="">
         </button>
         </td>
         <td data-titulo = "Subtotal" class="ps-4 align-middle">
@@ -367,7 +367,7 @@ verCarrito.addEventListener("click", () =>{
     <button class="card-button btn btn-secondary text-white fw-bold d-block ms-auto me-4">Pagar</button>
     <div class="mb-4">
     <a href="../index.html" class="text-decoration-none text-dark mt-5">
-    <img class="flecha_atras_carrito" src="../imagenes/flecha-atras.png" alt="">
+    <img class="flecha_atras_carrito" src="./imagenes/flecha-atras.png" alt="">
     <span class="fw-bold font">Continuar comprando</span>
     </a>
     </div>
