@@ -194,6 +194,7 @@ productos.forEach((tabla, index) => {
 // CREANDO EVENTO PARA VER EL CARRITO
 verCarrito.addEventListener("click", () =>{    
     generarContenidoCarrito();
+    guardarEnStorage();
     });
 
 //FUNCION PARA GENERAR EL CONTENIDO DEL CARRITO
@@ -246,7 +247,6 @@ contenidoCarrito.innerHTML = "";
         `;
         contenidoCarrito.append(contenido_carrito);
     });
-    
     //CREANDO FUNCION PARA CALCULAR EL TOTAL DE LA COMPRA
     const totalCompra = carrito.reduce((a, b) => a +b.total, 0);
     const totalPagar = document.createElement ("div");
@@ -281,4 +281,19 @@ const eliminarCarrito = (prodId) => {
     const indice = carrito.indexOf(item);
     carrito.splice(indice, 1);
     generarContenidoCarrito();
+    guardarEnStorage();
     }
+
+//FUNCION PARA GUARDAR EL CARRITO EN EL LOCAL STORAGE
+function guardarEnStorage() {
+    localStorage.setItem("carrito", JSON.stringify(carrito));
+}
+
+// FUNCION PARA CARGAR EL CARRITO DESDE EL LOCAL STORAGE
+window.addEventListener("load", () => {
+    const carritoGuardado = localStorage.getItem("carrito");
+    if (carritoGuardado) {
+        carrito = JSON.parse(carritoGuardado);
+        //generarContenidoCarrito();
+    }
+});

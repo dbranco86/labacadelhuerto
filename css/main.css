@@ -222,6 +222,9 @@ body {
   transform: translate(-50%, -50%);
   height: 100%;
   background-color: #f6f6f6; }
+  @media (max-width: 767px) {
+    .contenido_carrito {
+      height: 80%; } }
 
 #portada_productos {
   display: flex;
