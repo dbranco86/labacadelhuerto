@@ -178,10 +178,11 @@ contenidoCarrito.innerHTML = "";
 const eliminarCarrito = (prodId) => {
     const item = carrito.find((tabla) => tabla.id === prodId);
     const indice = carrito.indexOf(item);
-    carrito.splice(indice, 1);
-    generarContenidoCarrito();
-    guardarEnStorage();
-    }
+    alertaEliminarProducto(indice);
+    //carrito.splice(indice, 1);
+    //generarContenidoCarrito();
+    //guardarEnStorage();
+}
 
 //FUNCION PARA GUARDAR EL CARRITO EN EL LOCAL STORAGE
 function guardarEnStorage() {
@@ -214,6 +215,34 @@ const alertaAnadirAlCarrito = (tabla) => {
         iconColor: '#a89c8bc4',
         title: `Se añadió ${tabla.nombre} al carrito`
     });
+}
+
+////FUNCION PARA ELIMINAR PRODUCTO
+//const swalWithBootstrapButtons = Swal.mixin({
+//    customClass: {
+//        confirmButton: 'btn btn-success',
+//        cancelButton: 'btn btn-danger'
+//    },
+//    buttonsStyling: false
+//})
+
+//FUNCION PARA ELIMINAR PRODUCTO
+const alertaEliminarProducto = (indice) => {
+    Swal.fire({
+        title: 'Eliminar Producto',
+        icon: 'warning',
+        iconColor: '#a89c8bc4',
+        showCancelButton: true,
+        confirmButtonColor: '#795F3A',
+        cancelButtonColor: ' #AA9D8C',
+        confirmButtonText: 'Eliminar'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                carrito.splice(indice, 1);
+                generarContenidoCarrito();
+                guardarEnStorage(); 
+                }
+            })  
 }
 
 //FUNCION PARA ALERTA BOTON COMPRAR
