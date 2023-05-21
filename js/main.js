@@ -165,6 +165,7 @@ productos.forEach((tabla, index) =>{
     boton_anadir.innerText = "Añadir al carrito";
     boton_anadir.className = "card-button btn btn-secondary";
     cheeseboard_1.append(boton_anadir);
+    //AGREGAR AL CARRITO
     boton_anadir.addEventListener("click", () => {
         const existe = carrito.some(producto => producto.nombre === tabla.nombre)
         if (existe){
@@ -196,6 +197,7 @@ productos.forEach((tabla, index) =>{
         <p class="tarjeta_texto">Precio: ${TIPO_MONEDA} ${tabla.precio}</p>
         `;
         cheeseboard_2.append(contenido);
+        //AGREGAR AL CARRITO
         let boton_anadir = document.createElement ("button");
         boton_anadir.innerText = "Añadir al carrito";
         boton_anadir.className = "card-button btn btn-secondary";
@@ -235,6 +237,7 @@ productos.forEach((tabla, index) =>{
         boton_anadir.innerText = "Añadir al carrito";
         boton_anadir.className = "card-button btn btn-secondary";
         cheeseboard_3.append(boton_anadir);
+        //AGREGAR AL CARRITO
         boton_anadir.addEventListener("click", () => {
             const existe = carrito.some(producto => producto.nombre === tabla.nombre)
         if (existe){
@@ -266,6 +269,7 @@ productos.forEach((tabla, index) =>{
         <p class="tarjeta_texto">Precio: ${TIPO_MONEDA} ${tabla.precio}</p>
         `;
         cheeseboard_4.append(contenido);
+        //AGREGAR AL CARRITO
         let boton_anadir = document.createElement ("button");
         boton_anadir.innerText = "Añadir al carrito";
         boton_anadir.className = "card-button btn btn-secondary";
@@ -296,6 +300,92 @@ productos.forEach((tabla, index) =>{
         })
     }
 }); 
+
+ //ELIMINAR DEL CARRITO
+    const eliminarCarrito = (prodId) => {
+    const item = carrito.find((tabla) => tabla.id === prodId);
+    const indice = carrito.indexOf(item);
+    carrito.splice(indice, 1);
+    actualizarCarrito();
+    }
+
+//ACTUALIZAR CARRITO
+    const actualizarCarrito = () =>{
+    contenidoCarrito.innerHTML = "";
+    carrito.forEach((tabla) =>{
+        let contenido_carrito = document.createElement ("div");
+        contenido_carrito.className = "container mt-5 table-responsive";
+        contenido_carrito.innerHTML = `
+        <table class="table">
+        <thead>
+        <tr class="text-white border-bottom-none">
+        <th scope="col"></th>
+        <th scope="col">Producto</th>
+        <th scope="col">Precio</th>
+        <th scope="col text-center">Cantidad</th>
+        <th scope="col">Eliminar</th>
+        <th scope="col">Subtotal</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+        <td class="align-middle">
+        <img src="${tabla.imagen}" alt="Producto">
+        </td>
+        <td data-titulo = "Producto" class="align-middle">${tabla.nombre}</td>
+        <td data-titulo = "Precio" class="align-middle">
+        ${TIPO_MONEDA}
+        ${tabla.precio}
+        </td>
+        <td data-titulo = "Cantidad">
+        <div class="d-flex">
+        <button class="btn btn-outline-secondary mt-auto mb-auto" id="botonRestar">-</button>
+        <p class="ms-3 me-3 m-auto">${tabla.cantidad}</p>
+        <button class="btn btn-outline-secondary mt-auto mb-auto" id="botonAgregar${tabla.id}">+</button>
+        </div>
+        </td>
+        <td data-titulo = "Eliminar">
+        <button onclick= "eliminarCarrito (${tabla.id})" class="btn rounded-pill mb-2 ps-4 align-middle">
+        <img class="imagen_carrito" src="./imagenes/boton_eliminar.png" alt="">
+        </button>
+        </td>
+        <td data-titulo = "Subtotal" class="ps-4 align-middle">
+        ${tabla.total}
+        <span class="d-none">0</span>
+        </td>
+        </tr>
+        </tbody>
+        </table>
+        `;
+        contenidoCarrito.append(contenido_carrito);
+    });
+    //CREANDO FUNCION PARA CALCULAR EL TOTAL DE LA COMPRA
+    const totalCompra = carrito.reduce((a, b) => a +b.total, 0);
+    const totalPagar = document.createElement ("div");
+    totalPagar.className = ("container");
+    totalPagar.innerHTML = `
+    <hr class="w-25 ms-auto mt-5 hr-style">
+    <hr class="w-25 ms-auto border-bottom border-5 bg-dark mt-4 hr-style">
+    <div class="payment-checkout w-100">
+    <div class="d-flex justify-content-end fw-bold">
+    <p class="d-inline me-5">Total:</p>
+    <span>
+    ${TIPO_MONEDA}
+    ${totalCompra}
+    </span>
+    </div>
+    </div>
+    <button class="card-button btn btn-secondary text-white fw-bold d-block ms-auto me-4">Pagar</button>
+    <div class="mb-4">
+    <a href="./index.html" class="text-decoration-none text-dark mt-5">
+    <img class="flecha_atras_carrito" src="./imagenes/flecha-atras.png" alt="">
+    <span class="fw-bold font">Continuar comprando</span>
+    </a>
+    </div>
+    </div>
+    `;
+    contenidoCarrito.append(totalPagar);
+    }
 
 // CREANDO ESTRUCTURA DEL CARRITO
 verCarrito.addEventListener("click", () =>{
@@ -333,7 +423,7 @@ verCarrito.addEventListener("click", () =>{
         </div>
         </td>
         <td data-titulo = "Eliminar">
-        <button class="btn rounded-pill mb-2 ps-4 align-middle">
+        <button onclick= "eliminarCarrito (${tabla.id})" class="btn rounded-pill mb-2 ps-4 align-middle">
         <img class="imagen_carrito" src="./imagenes/boton_eliminar.png" alt="">
         </button>
         </td>
@@ -366,7 +456,7 @@ verCarrito.addEventListener("click", () =>{
     </div>
     <button class="card-button btn btn-secondary text-white fw-bold d-block ms-auto me-4">Pagar</button>
     <div class="mb-4">
-    <a href="../index.html" class="text-decoration-none text-dark mt-5">
+    <a href="./index.html" class="text-decoration-none text-dark mt-5">
     <img class="flecha_atras_carrito" src="./imagenes/flecha-atras.png" alt="">
     <span class="fw-bold font">Continuar comprando</span>
     </a>
