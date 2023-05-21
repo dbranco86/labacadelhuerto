@@ -48,7 +48,8 @@ productos.forEach((tabla, index) => {
     const boton_anadir = document.createElement("button");
     boton_anadir.innerText = "Añadir al carrito";
     boton_anadir.className = "card-button btn btn-secondary";
-    cheeseboardContenido.append(boton_anadir);
+    boton_anadir.id = "anadirProducto" + tabla.id;
+    cheeseboardContenido.append(boton_anadir);  
     
     //CREANDO EVENTO CLICK PARA AÑADIR CONTENIDO AL CARRITO
     boton_anadir.addEventListener("click", () => {
@@ -75,12 +76,18 @@ productos.forEach((tabla, index) => {
             });
         }
     });
+    
+    //CREANDO EVENTO PARA VER LAS ALERTAS DEL BOTON AÑADIR
+    boton_anadir.addEventListener("click", () => {
+        manejarAñadirAlCarrito(tabla);
+    });
 });
 
 // CREANDO EVENTO PARA VER EL CARRITO
 verCarrito.addEventListener("click", () =>{    
     generarContenidoCarrito();
     guardarEnStorage();
+    ajustarTamanoCarrito();
     });
 
 //FUNCION PARA GENERAR EL CONTENIDO DEL CARRITO
@@ -133,7 +140,8 @@ contenidoCarrito.innerHTML = "";
         `;
         contenidoCarrito.append(contenido_carrito);
     });
-    //CREANDO FUNCION PARA CALCULAR EL TOTAL DE LA COMPRA
+    
+    //FUNCION PARA CALCULAR EL TOTAL DE LA COMPRA
     const totalCompra = carrito.reduce((a, b) => a +b.total, 0);
     const totalPagar = document.createElement ("div");
     totalPagar.className = ("container");
@@ -182,3 +190,24 @@ window.addEventListener("load", () => {
         carrito = JSON.parse(carritoGuardado);
     }
 });
+
+//ALERTAS
+//FUNCION PARA ALERTA DE BOTON AÑADIR
+const manejarAñadirAlCarrito = (tabla) => {
+    const Toast = Swal.mixin({
+        toast: true,
+        position: 'top',
+        showConfirmButton: false,
+        timer: 3000,
+        didOpen: (toast) => {
+            toast.addEventListener('mouseenter', Swal.stopTimer);
+            toast.addEventListener('mouseleave', Swal.resumeTimer);
+        }
+    });
+
+    Toast.fire({
+        icon: 'success',
+        iconColor: '#a89c8bc4',
+        title: `Se añadió ${tabla.nombre} al carrito`
+    });
+}

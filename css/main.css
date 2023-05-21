@@ -220,11 +220,11 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  height: 100%;
+  max-height: 80%;
   background-color: #f6f6f6; }
   @media (max-width: 767px) {
     .contenido_carrito {
-      height: 80%; } }
+      width: 85%; } }
 
 #portada_productos {
   display: flex;
