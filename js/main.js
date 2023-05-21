@@ -79,7 +79,7 @@ productos.forEach((tabla, index) => {
     
     //CREANDO EVENTO PARA VER LAS ALERTAS DEL BOTON AÑADIR
     boton_anadir.addEventListener("click", () => {
-        manejarAñadirAlCarrito(tabla);
+        alertaAnadirAlCarrito(tabla);
     });
 });
 
@@ -157,7 +157,7 @@ contenidoCarrito.innerHTML = "";
     </span>
     </div>
     </div>
-    <button class="card-button btn btn-secondary text-white fw-bold d-block ms-auto me-4">Pagar</button>
+    <button class="card-button btn btn-secondary text-white fw-bold d-block ms-auto me-4" id="botonPagar">Pagar</button>
     <div class="mb-4">
     <a href="./index.html" class="text-decoration-none text-dark mt-5">
     <img class="flecha_atras_carrito" src="./imagenes/flecha-atras.png" alt="">
@@ -167,6 +167,11 @@ contenidoCarrito.innerHTML = "";
     </div>
     `;
     contenidoCarrito.append(totalPagar);
+    
+    //CREANDO EVENTO PARA VER LAS ALERTAS DEL BOTON AÑADIR
+    botonPagar.addEventListener("click", () => {
+        alertaComprar();
+    });
 }
 
 //FUNCION PARA ELIMINAR PRODUCTOS DEL CARRITO
@@ -193,7 +198,7 @@ window.addEventListener("load", () => {
 
 //ALERTAS
 //FUNCION PARA ALERTA DE BOTON AÑADIR
-const manejarAñadirAlCarrito = (tabla) => {
+const alertaAnadirAlCarrito = (tabla) => {
     const Toast = Swal.mixin({
         toast: true,
         position: 'top',
@@ -204,10 +209,32 @@ const manejarAñadirAlCarrito = (tabla) => {
             toast.addEventListener('mouseleave', Swal.resumeTimer);
         }
     });
-
     Toast.fire({
         icon: 'success',
         iconColor: '#a89c8bc4',
         title: `Se añadió ${tabla.nombre} al carrito`
     });
+}
+
+//FUNCION PARA ALERTA BOTON COMPRAR
+const alertaComprar = () => {
+    Swal.fire({
+        title: 'Desea confirmar su compra?',
+        icon: 'warning',
+        iconColor: '#a89c8bc4',
+        showCancelButton: true,
+        confirmButtonColor: '#AA9D8C',
+        cancelButtonColor: '#795F3A',
+        confirmButtonText: 'Si, pagar'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                Swal.fire(
+                'Gracias por su compra!',
+                'Lo esperamos pronto!'
+                )
+                carrito.splice(0, carrito.length); 
+                generarContenidoCarrito(); 
+                guardarEnStorage(); 
+            }
+        })
 }
