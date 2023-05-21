@@ -48,9 +48,10 @@
                                         <a class="nav-link" href="#">Iniciar sesión</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="../paginas/carrito.html">
+                                        <!--<a class="nav-link" href="../paginas/carrito.html">
                                             <img class="navbar_carrito" src="../imagenes/carrito.png" alt="">
-                                        </a>
+                                        </a>-->
+                                        <img class="navbar_carrito" id="verCarrito" src="../imagenes/carrito.png" alt="">
                                     </li>        
                                 </ul>
                             </div>
@@ -83,7 +84,7 @@
                 <div class="col-12">
                     <div>
                         <div class="container mt-5 table-responsive">
-                            <div id="contenidoCarrito">
+                            <div id="contenidoCarrito" class="contenido_carrito">
                                 <table class="table">
                                     <thead>
                                         <tr class="text-white border-bottom-none">
@@ -127,30 +128,31 @@
                                             </td>
                                         </tr>
                                     </tbody>
-                                </table> 
+                                </table>
+                                <!--DIV CARRITO DE COMPRAS-->
                             </div>
                         </div>                       
                     </div>
-                        <div class="container">
-                            <hr class="w-25 ms-auto mt-5 hr-style">
-                            <hr class="w-25 ms-auto border-bottom border-5 bg-dark mt-4 hr-style">
-                            <div class="payment-checkout w-100">
-                                <div class="d-flex justify-content-end fw-bold">
-                                    <p class="d-inline me-5">Total:</p>
-                                    <span>
-                                        "USD"
-                                        "10"
-                                    </span>
-                                </div>
-                            </div>
-                            <button class="card-button btn btn-secondary text-white fw-bold d-block ms-auto me-4">Pagar</button>
-                            <div class="mb-4">
-                                <a href="../index.html" class="text-decoration-none text-dark mt-5">
-                                    <img class="flecha_atras_carrito" src="../imagenes/flecha-atras.png" alt="">
-                                    <span class="fw-bold font">Continuar comprando</span>
-                                </a>
+                    <div class="container">
+                        <hr class="w-25 ms-auto mt-5 hr-style">
+                        <hr class="w-25 ms-auto border-bottom border-5 bg-dark mt-4 hr-style">
+                        <div class="payment-checkout w-100">
+                            <div class="d-flex justify-content-end fw-bold">
+                                <p class="d-inline me-5">Total:</p>
+                                <span>
+                                    "USD"
+                                    "10"
+                                </span>
                             </div>
                         </div>
+                        <button class="card-button btn btn-secondary text-white fw-bold d-block ms-auto me-4">Pagar</button>
+                        <div class="mb-4">
+                            <a href="../index.html" class="text-decoration-none text-dark mt-5">
+                                <img class="flecha_atras_carrito" src="../imagenes/flecha-atras.png" alt="">
+                                <span class="fw-bold font">Continuar comprando</span>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>                                     
@@ -181,9 +183,9 @@
                                     <li>
                                         <a href="">Quienes somos</a>
                                     </li>
-                                    <li>
+                                    <!--<li>
                                         <a href="../paginas/carrito.html"><img class="navbar_carrito" src="../imagenes/carrito.png" alt=""></a>
-                                    </li>
+                                    </li>-->
                                 </ul>
                             </div>
                             <div class="footer__info">

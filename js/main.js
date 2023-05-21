@@ -294,6 +294,5 @@ window.addEventListener("load", () => {
     const carritoGuardado = localStorage.getItem("carrito");
     if (carritoGuardado) {
         carrito = JSON.parse(carritoGuardado);
-        //generarContenidoCarrito();
     }
 });
