@@ -374,3 +374,34 @@ hr {
 
 .btn:first-child:active {
   border-color: transparent; }
+
+#portada_productos {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  max-width: 100%;
+  padding: 6%;
+  height: 250px;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url(https://images.unsplash.com/photo-1551790629-9d5c2d781d8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=927&q=80);
+  background-position: left;
+  background-size: cover;
+  filter: saturate(0.8);
+  inset: 0; }
+  #portada_productos h1 {
+    color: #fff; }
+  @media (max-width: 767px) {
+    #portada_productos {
+      background-position: right;
+      padding-top: 25%; } }
+
+.flex-wrap-descripcion {
+  padding: 3% 10% 2% 10%; }
+
+.descripcion {
+  padding-left: 10%;
+  max-width: 100%; }
+
+p {
+  font-weight: bold;
+  color: #55524d; }
