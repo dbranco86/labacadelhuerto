@@ -178,7 +178,7 @@ contenidoCarrito.innerHTML = "";
 const eliminarCarrito = (prodId) => {
     const item = carrito.find((tabla) => tabla.id === prodId);
     const indice = carrito.indexOf(item);
-    alertaEliminarProducto(indice);
+    alertaEliminarProducto(item, indice);
     //carrito.splice(indice, 1);
     //generarContenidoCarrito();
     //guardarEnStorage();
@@ -217,19 +217,11 @@ const alertaAnadirAlCarrito = (tabla) => {
     });
 }
 
-////FUNCION PARA ELIMINAR PRODUCTO
-//const swalWithBootstrapButtons = Swal.mixin({
-//    customClass: {
-//        confirmButton: 'btn btn-success',
-//        cancelButton: 'btn btn-danger'
-//    },
-//    buttonsStyling: false
-//})
-
 //FUNCION PARA ELIMINAR PRODUCTO
-const alertaEliminarProducto = (indice) => {
+const alertaEliminarProducto = (item, indice,) => {
     Swal.fire({
         title: 'Eliminar Producto',
+        text: `Está seguro que desea eliminar el producto ${item.nombre} del carrito?`,
         icon: 'warning',
         iconColor: '#a89c8bc4',
         showCancelButton: true,
