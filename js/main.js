@@ -179,9 +179,6 @@ const eliminarCarrito = (prodId) => {
     const item = carrito.find((tabla) => tabla.id === prodId);
     const indice = carrito.indexOf(item);
     alertaEliminarProducto(item, indice);
-    //carrito.splice(indice, 1);
-    //generarContenidoCarrito();
-    //guardarEnStorage();
 }
 
 //FUNCION PARA GUARDAR EL CARRITO EN EL LOCAL STORAGE
@@ -204,7 +201,7 @@ const alertaAnadirAlCarrito = (tabla) => {
         toast: true,
         position: 'top',
         showConfirmButton: false,
-        timer: 3000,
+        timer: 1000,
         didOpen: (toast) => {
             toast.addEventListener('mouseenter', Swal.stopTimer);
             toast.addEventListener('mouseleave', Swal.resumeTimer);
