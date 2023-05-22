@@ -227,21 +227,17 @@ body {
       width: 85%; } }
 
 .swal2-styled.swal2-confirm {
-  border: 0;
-  border-radius: 0.25em;
-  background: initial;
-  background-color: #AA9D8C;
-  color: #fff;
-  font-size: 1em; }
+  background-color: #AA9D8C !important;
+  color: #fff !important; }
 
 .swal2-styled.swal2-confirm:focus {
-  box-shadow: 0 0 0 3px white; }
+  box-shadow: 0 0 0 3px white !important; }
 
 .swal2-html-container {
-  color: #c0aa83; }
+  color: #c0aa83 !important; }
 
 .swal2-styled.swal2-default-outline:focus {
-  box-shadow: 0 0 0 3px white; }
+  box-shadow: 0 0 0 3px white !important; }
 
 #portada_productos {
   display: flex;
