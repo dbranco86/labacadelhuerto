@@ -87,7 +87,6 @@ productos.forEach((tabla, index) => {
 verCarrito.addEventListener("click", () =>{    
     generarContenidoCarrito();
     guardarEnStorage();
-    ajustarTamanoCarrito();
     });
 
 //FUNCION PARA GENERAR EL CONTENIDO DEL CARRITO
@@ -139,7 +138,32 @@ contenidoCarrito.innerHTML = "";
         </table>
         `;
         contenidoCarrito.append(contenido_carrito);
+        
+        //CREANDO EVENTOS PARA BOTONES + - 
+        const botonRestar = contenido_carrito.querySelector("#botonRestar");
+        const botonAgregar = contenido_carrito.querySelector("#botonAgregar" + tabla.id);
+    
+        botonRestar.addEventListener("click", () => restarCantidad(tabla.id));
+        botonAgregar.addEventListener("click", () => sumarCantidad(tabla.id));
     });
+
+    //FUNCION PARA BOTONES + - 
+    function restarCantidad(prodId) {
+        const producto = carrito.find((tabla) => tabla.id === prodId);
+        if (producto.cantidad > 1) {
+            producto.cantidad--;
+            producto.total = producto.precio * producto.cantidad;
+            generarContenidoCarrito();
+            guardarEnStorage();
+        }
+    }
+    function sumarCantidad(prodId) {
+        const producto = carrito.find((tabla) => tabla.id === prodId);
+        producto.cantidad++;
+        producto.total = producto.precio * producto.cantidad;
+        generarContenidoCarrito();
+        guardarEnStorage();
+    }
     
     //FUNCION PARA CALCULAR EL TOTAL DE LA COMPRA
     const totalCompra = carrito.reduce((a, b) => a +b.total, 0);
@@ -214,7 +238,7 @@ const alertaAnadirAlCarrito = (tabla) => {
     });
 }
 
-//FUNCION PARA ELIMINAR PRODUCTO
+//FUNCION PARA ALERTA ELIMINAR PRODUCTO
 const alertaEliminarProducto = (item, indice,) => {
     Swal.fire({
         title: 'Eliminar Producto',
