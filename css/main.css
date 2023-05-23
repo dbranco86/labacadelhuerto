@@ -53,6 +53,9 @@ body {
   body .sombras {
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important; }
 
+.focus-visible {
+  outline-color: #c0aa83; }
+
 .contenedor_footer {
   padding: 4rem;
   background-color: black; }
