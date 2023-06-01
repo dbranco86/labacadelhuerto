@@ -42,9 +42,9 @@
                                         <a class="nav-link dropdown-toggle focus-visible" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Nuestros Productos</a>
                                         <ul class="dropdown-menu">
                                             <li><a class="dropdown-item" href="./index.html">Cheese Boards</a></li>
-                                            <li><a class="dropdown-item" href="./paginas/cheeseboxes.html">Cheese Boxes</a></li>
+                                            <li><a class="dropdown-item" href="#div-2">Cheese Boxes</a></li>
                                             <li><hr class="dropdown-divider"></li>
-                                            <li><a class="dropdown-item" href="./paginas/mesas-de-quesos.html">Mesas de Quesos</a></li>
+                                            <li><a class="dropdown-item" href="#div-3">Mesas de Quesos</a></li>
                                         </ul>
                                     </li>
                                 </ul>
@@ -53,10 +53,10 @@
                                         <a class="nav-link" href="#">Iniciar sesión</a>
                                     </li>
                                     <li class="nav-item">
-                                        <!--<a class="nav-link" href="./paginas/carrito.html">
+                                        <button class="btn">
                                             <img class="navbar_carrito" id="verCarrito" src="./imagenes/carrito.png" alt="">
-                                        </a>-->
-                                        <img class="navbar_carrito" id="verCarrito" src="./imagenes/carrito.png" alt="">
+                                            <span id="numerito" class="numerito">0</span>
+                                        </button>
                                     </li>        
                                 </ul>
                             </div>
@@ -105,18 +105,19 @@
         <section id="section-2">    
             <ul class="nav nav-tabs nav__menu">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="./index.html">Cheese Boards</a>
+                    <button  id="tab-1" class="nav-link active">Cheese Boards</button>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="./paginas/cheeseboxes.html">Cheese Boxes</a>
+                    <button id="tab-2" class="nav-link">Cheese Boxes</button>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="./paginas/mesas-de-quesos.html">Mesas de Quesos</a>
+                    <button id="tab-3" class="nav-link">Mesas de Quesos</button>
                 </li>
                 </ul>
         </section>    
         <!--TARJETAS PRODUCTOS-->
-        <div class="container-fluid">
+        <!--CHEESE BOARDS-->
+        <div class="container-fluid " id="div-1">
             <div class="row">
                 <div class="col-12 ">
                     <section id="section-3">
@@ -156,12 +157,102 @@
                                 </div>
                             </div>
                         </div> 
-                    </section> 
-                    <!--DIV CARRITO DE COMPRAS-->
-                    <div id="contenidoCarrito" class="contenido_carrito"></div>    
+                    </section>  
                 </div>
             </div>
-        </div>    
+        </div> 
+        <!--CHEESE BOXES-->
+        <div class="container-fluid d-none" id="div-2">
+            <div class="row">
+                <div class="col-12 ">
+                    <section id="section-3">
+                        <div class="section-card">                         
+                            <div class="card card_productos sombras tarjeta__producto" style="width: 18rem;">
+                                <a href="./paginas/cheesebox-1.html">
+                                    <img src="./imagenes/Quesos1.jpg" class="card-img-top" alt="...">    
+                                </a>
+                                <div class="card-body text-center" id="cheesebox_1">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="section-card" id="cheesebox-2">
+                            <div class="card card_productos sombras" style="width: 18rem;">
+                                <a href="./paginas/cheesebox-2.html">
+                                    <img src="./imagenes/Quesos2.jpg" class="card-img-top" alt="...">
+                                </a>
+                                <div class="card-body text-center" id="cheesebox_2">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="section-card" id="cheesebox-3">
+                            <div class="card card_productos sombras" style="width: 18rem;">
+                                <a href="./paginas/cheesebox-3.html">
+                                    <img src="./imagenes/Quesos3.jpg" class="card-img-top" alt="...">
+                                </a>
+                                <div class="card-body text-center" id="cheesebox_3">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="section-card text-center" id="cheesebox-4">
+                            <div class="card card_productos sombras" style="width: 18rem;">
+                                <a href="./paginas/cheesebox-4.html">
+                                    <img src="./imagenes/Quesos4.jpg" class="card-img-top" alt="...">
+                                </a>
+                                <div class="card-body" id="cheesebox_4">
+                                </div>
+                            </div>
+                        </div> 
+                    </section> 
+                </div>
+            </div>
+        </div> 
+        <!--MESAS DE QUESOS-->
+        <div class="container-fluid d-none" id="div-3">
+            <div class="row">
+                <div class="col-12 ">
+                    <section id="section-3">
+                        <div class="section-card">                         
+                            <div class="card card_productos sombras tarjeta__producto" style="width: 18rem;">
+                                <a href="./paginas/mesaquesos-1.html">
+                                    <img src="./imagenes/Quesos1.jpg" class="card-img-top" alt="...">    
+                                </a>
+                                <div class="card-body text-center" id="mesaquesos_1">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="section-card" id="mesaquesos-2">
+                            <div class="card card_productos sombras" style="width: 18rem;">
+                                <a href="./paginas/mesaquesos-2.html">
+                                    <img src="./imagenes/Quesos2.jpg" class="card-img-top" alt="...">
+                                </a>
+                                <div class="card-body text-center" id="mesaquesos_2">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="section-card" id="mesaquesos-3">
+                            <div class="card card_productos sombras" style="width: 18rem;">
+                                <a href="./paginas/mesaquesos-3.html">
+                                    <img src="./imagenes/Quesos3.jpg" class="card-img-top" alt="...">
+                                </a>
+                                <div class="card-body text-center" id="mesaquesos_3">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="section-card text-center" id="mesaquesos-4">
+                            <div class="card card_productos sombras" style="width: 18rem;">
+                                <a href="./paginas/mesaquesos-4.html">
+                                    <img src="./imagenes/Quesos4.jpg" class="card-img-top" alt="...">
+                                </a>
+                                <div class="card-body" id="mesaquesos_4">
+                                </div>
+                            </div>
+                        </div> 
+                    </section> 
+                </div>
+            </div>
+        </div>
+        <!--DIV CARRITO DE COMPRAS-->
+        <div id="contenidoCarrito" class="contenido_carrito"></div>     
         <div class="container-fluid">
             <div class="row">
                 <div class="col-12">
@@ -196,14 +287,11 @@
                                         <a href="./index.html">Inicio</a>
                                     </li>
                                     <li>
-                                        <a href="">Iniciar Sesión</a>
-                                    </li>
-                                    <li>
                                         <a href="./paginas/quienes-somos.html">Quienes somos</a>
                                     </li>
-                                    <!--<li>
-                                        <a href="./paginas/carrito.html"><img class="navbar_carrito" src="./imagenes/carrito.png" alt=""></a>
-                                    </li>-->
+                                    <li>
+                                        <a href="">Iniciar Sesión</a>
+                                    </li>
                                 </ul>
                             </div>
                             <div class="footer__info">
@@ -238,6 +326,11 @@
     <!--BOOSTSTRAP-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
     <!--NUESTRO JS-->
-    <script src="./js/main.js"></script>    
+    <script src="./js/main.js"></script>
+    <script src="./js/productos.json"></script>
+    <script src="./js/tabs.js"></script>  
+    <script src="./js/cheeseboard.js"></script>  
+    <script src="./js/cheesebox.js"></script>
+    <script src="./js/mesaquesos.js"></script>
 </body>
 </html>

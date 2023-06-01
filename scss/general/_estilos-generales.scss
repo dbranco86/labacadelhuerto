@@ -23,6 +23,12 @@ body{
         font-weight: 800;
     }
 // Estilos para el header
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+}
 .navbar__fondo{
     background-color: #000;
 }

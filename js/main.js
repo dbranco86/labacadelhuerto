@@ -1,4 +1,4 @@
-
+/*
 //CONSTRUCTOR DE OBJETOS
 class Producto {
     constructor(id, nombre, precio, cantidad, imagen, total) {
@@ -12,18 +12,34 @@ class Producto {
 }
 
 //CREO OBJETOS
-const PRODUCTO_1 = new Producto ("1", "Cheese Board n°1", "100", "1", "./imagenes/Quesos1-carrito.png", "200");
+const PRODUCTO_1 = new Producto ("1", "Cheese Board n°1", "100", "1", "./imagenes/Quesos1-carrito.png", "100");
 const PRODUCTO_2 = new Producto ("2", "Cheese Board n°2", "200", "1", "./imagenes/Quesos2-carrito.png", "200"); 
 const PRODUCTO_3 = new Producto ("3", "Cheese Board n°3", "300", "1", "./imagenes/Quesos3-carrito.png", "300");
 const PRODUCTO_4 = new Producto ("4", "Cheese Board n°4", "400", "1", "./imagenes/Quesos4-carrito.png", "400");
+const PRODUCTO_5 = new Producto ("5", "Cheese Box n°1", "100", "1", "./imagenes/Quesos1-carrito.png", "100");
+const PRODUCTO_6 = new Producto ("6", "Cheese Box n°2", "200", "1", "./imagenes/Quesos2-carrito.png", "200"); 
+const PRODUCTO_7 = new Producto ("7", "Cheese Box n°3", "300", "1", "./imagenes/Quesos3-carrito.png", "300");
+const PRODUCTO_8 = new Producto ("8", "Cheese Box n°4", "400", "1", "./imagenes/Quesos4-carrito.png", "400");
+const PRODUCTO_9 = new Producto ("9", "Mesa de Quesos n°1", "100", "1", "./imagenes/Quesos1-carrito.png", "100");
+const PRODUCTO_10 = new Producto ("10", "Mesa de Quesos n°2", "200", "1", "./imagenes/Quesos2-carrito.png", "200"); 
+const PRODUCTO_11= new Producto ("11", "Mesa de Quesos n°3", "300", "1", "./imagenes/Quesos3-carrito.png", "300");
+const PRODUCTO_12= new Producto ("12", "Mesa de Quesos n°4", "400", "1", "./imagenes/Quesos4-carrito.png", "400");
 
 //CREO ARRAY DE PRODUCTOS
 const productos = [
     PRODUCTO_1,
     PRODUCTO_2,
     PRODUCTO_3,
-    PRODUCTO_4
-];
+    PRODUCTO_4,
+    PRODUCTO_5,
+    PRODUCTO_6,
+    PRODUCTO_7,
+    PRODUCTO_8,
+    PRODUCTO_9,
+    PRODUCTO_10,
+    PRODUCTO_11,
+    PRODUCTO_12
+];*/
 
 //CREO ARRAY DE CARRITO
 let carrito = [];
@@ -34,54 +50,9 @@ const TIPO_MONEDA = "s/";
 //CAPTURO ID DE TARJETAS
 const verCarrito = document.getElementById ("verCarrito");
 const contenidoCarrito = document.getElementById ("contenidoCarrito");
+const numerito = document.querySelector("#numerito");
 
-//CREANDO ELEMENTOS HTML
-productos.forEach((tabla, index) => {
-    //SELECCIONAMOS DE FORMA DINAMICA EL ELEMENTO DESDE EL HTML
-    const cheeseboardContenido = document.querySelector(`#cheeseboard_${index + 1}`);
-    const contenido = document.createElement("div");
-    contenido.innerHTML = `
-        <h5 class="tarjeta_titulo">${tabla.nombre}</h5>
-        <p class="tarjeta_texto">Precio: ${TIPO_MONEDA} ${tabla.precio}</p>
-    `;
-    cheeseboardContenido.append(contenido);
-    const boton_anadir = document.createElement("button");
-    boton_anadir.innerText = "Añadir al carrito";
-    boton_anadir.className = "card-button btn btn-secondary";
-    boton_anadir.id = "anadirProducto" + tabla.id;
-    cheeseboardContenido.append(boton_anadir);  
-    
-    //CREANDO EVENTO CLICK PARA AÑADIR CONTENIDO AL CARRITO
-    boton_anadir.addEventListener("click", () => {
-        const existe = carrito.some((producto) => producto.nombre === tabla.nombre);
-        if (existe) {
-            const productos = carrito.map((producto) => {
-                if (producto.nombre === tabla.nombre) {
-                    producto.cantidad++;
-                    producto.total = producto.precio * producto.cantidad;
-                    return producto;
-                } else {
-                    return producto;
-                }
-            });
-            carrito = [...productos];
-        } else {
-            carrito.push({
-            id: tabla.id,
-            nombre: tabla.nombre,
-            precio: tabla.precio,
-            cantidad: tabla.cantidad,
-            total: tabla.precio * tabla.cantidad,
-            imagen: tabla.imagen,
-            });
-        }
-    });
-    
-    //CREANDO EVENTO PARA VER LAS ALERTAS DEL BOTON AÑADIR
-    boton_anadir.addEventListener("click", () => {
-        alertaAnadirAlCarrito(tabla);
-    });
-});
+
 
 // CREANDO EVENTO PARA VER EL CARRITO
 verCarrito.addEventListener("click", () =>{    
@@ -146,7 +117,7 @@ contenidoCarrito.innerHTML = "";
         botonRestar.addEventListener("click", () => restarCantidad(tabla.id));
         botonAgregar.addEventListener("click", () => sumarCantidad(tabla.id));
     });
-
+    actualizarNumerito();
     //FUNCION PARA BOTONES + - 
     function restarCantidad(prodId) {
         const producto = carrito.find((tabla) => tabla.id === prodId);
@@ -216,7 +187,13 @@ window.addEventListener("load", () => {
     if (carritoGuardado) {
         carrito = JSON.parse(carritoGuardado);
     }
+    actualizarNumerito();
 });
+
+function actualizarNumerito() {
+    let nuevoNumerito = carrito.reduce((acc, prod) => acc + prod.cantidad, 0);
+    numerito.innerText = nuevoNumerito;
+}
 
 //ALERTAS
 //FUNCION PARA ALERTA DE BOTON AÑADIR

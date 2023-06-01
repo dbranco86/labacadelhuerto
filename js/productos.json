@@ -1,0 +1,98 @@
+[
+    {
+        "id": 1,
+        "nombre": "Cheese Board n°1",
+        "precio": 100,
+        "cantidad": 1,
+        "imagen": "./imagenes/Quesos1-carrito.png",
+        "total": "100"
+    },
+    {
+        "id": 2,
+        "nombre": "Cheese Board n°2",
+        "precio": 200,
+        "cantidad": 1,
+        "imagen": "./imagenes/Quesos2-carrito.png",
+        "total": "200"
+    },
+    {
+        "id": 3,
+        "nombre": "Cheese Board n°3",
+        "precio": 300,
+        "cantidad": 1,
+        "imagen": "./imagenes/Quesos3-carrito.png",
+        "total": "300"
+    },
+    {
+        "id": 4,
+        "nombre": "Cheese Board n°4",
+        "precio": 400,
+        "cantidad": 1,
+        "imagen": "./imagenes/Quesos4-carrito.png",
+        "total": "400"
+    },
+    {
+        "id": 5,
+        "nombre": "Cheese Box n°1",
+        "precio": 100,
+        "cantidad": 1,
+        "imagen": "./imagenes/Quesos1-carrito.png",
+        "total": "100"
+    },
+    {
+        "id": 6,
+        "nombre": "Cheese Box n°2",
+        "precio": 200,
+        "cantidad": 1,
+        "imagen": "./imagenes/Quesos2-carrito.png",
+        "total": "200"
+    },
+    {
+        "id": 7,
+        "nombre": "Cheese Box n°3",
+        "precio": 300,
+        "cantidad": 1,
+        "imagen": "./imagenes/Quesos3-carrito.png",
+        "total": "300"
+    },
+    {
+        "id": 8,
+        "nombre": "Cheese Box n°4",
+        "precio": 400,
+        "cantidad": 1,
+        "imagen": "./imagenes/Quesos4-carrito.png",
+        "total": "400"
+    },
+    {
+        "id": 9,
+        "nombre": "Mesa de Quesos n°1",
+        "precio": 100,
+        "cantidad": 1,
+        "imagen": "./imagenes/Quesos1-carrito.png",
+        "total": "100"
+    },
+    {
+        "id": 10,
+        "nombre": "Mesa de Quesos n°2",
+        "precio": 200,
+        "cantidad": 1,
+        "imagen": "./imagenes/Quesos2-carrito.png",
+        "total": "200"
+    },
+    {
+        "id": 11,
+        "nombre": "Mesa de Quesos n°3",
+        "precio": 300,
+        "cantidad": 1,
+        "imagen": "./imagenes/Quesos3-carrito.png",
+        "total": "300"
+    },
+    {
+        "id": 12,
+        "nombre": "Mesa de Quesos n°4",
+        "precio": 400,
+        "cantidad": 1,
+        "imagen": "./imagenes/Quesos4-carrito.png",
+        "total": "400"
+    }
+]

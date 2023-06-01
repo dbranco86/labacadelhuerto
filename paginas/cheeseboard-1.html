@@ -53,10 +53,9 @@
                                         <a class="nav-link" href="#">Iniciar sesión</a>
                                     </li>
                                     <li class="nav-item">
-                                        <!--<a class="nav-link" href="./paginas/carrito.html">
-                                            <img class="navbar_carrito" id="verCarrito" src="./imagenes/carrito.png" alt="">
-                                        </a>-->
-                                        <img class="navbar_carrito" id="verCarrito" src="../imagenes/carrito.png" alt="">
+                                        <button class="btn">
+                                            <img class="navbar_carrito" id="verCarrito" src="../imagenes/carrito.png" alt="">
+                                        </button>
                                     </li>        
                                 </ul>
                             </div>
@@ -84,51 +83,10 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-12">
-                    <div class="contenedor_carrito">
-                        <div class="color-bg row  flex-wrap">
-                            <div class="col-md-4 color-bg d-flex flex-column">
-                                <div class="img">
-                                    <img class="sombras" src="../imagenes/Quesos1.jpg" alt="">
-                                </div>
-                                <div role="button">
-                                    <a href="../index.html">
-                                        <img class="flecha_atras" src="../imagenes/flecha-atras.png" alt="">
-                                    </a>
-                                    <span class="fw-bold font">Continuar comprando</span> 
-                                </div>
-                            </div>
-                            <div class="col-md-8 color-bg buy-div h-100">
-                                <h3 class="font tarjeta_titulo">Cheeseboard n°1</h3>
-                                <div>
-                                    <h4 class="fw-bold font">
-                                        Descripción
-                                    </h4>
-                                    <p class="description-text fw-bold font">
-                                        3 Clases de Quesos. <br>
-                                        2 clases de fiambres. <br>
-                                        Fruta de estación. <br>
-                                        Panes. <br>
-                                        Frutos secos. <br>
-                                        Tabla. <br>
-                                    </p>
-                                    <div class="align-items-center">
-                                        <div class="d-flex">
-                                            <button class="btn btn-outline-secondary mt-auto mb-auto">-</button>
-                                            <input type="number" class="product-input align-items-center">
-                                            <button class="btn btn-outline-secondary mt-auto mb-auto">+</button>
-                                            <button class="btn btn-secondary secondary-color-bg text-white fw-bold my-2 ms-4 font">Añadir al carrito</button>
-                                        </div>
-                                        <span class="fw-bold me-2 d-block fs-5 mt-3 font tarjeta_titulo">Precio: </span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--DIV CARRITO DE COMPRAS-->
-                    <div id="contenidoCarrito" class="contenido_carrito"></div>  
+                    <div class="contenedor_carrito" id="cheeseboard-1"> 
                 </div>
             </div>
-        </div>                                      
+        </div>                                    
     </main>
     <!--INICIO FOOTER-->
     <footer>
@@ -151,14 +109,11 @@
                                         <a href="../index.html">Inicio</a>
                                     </li>
                                     <li>
-                                        <a href="">Iniciar Sesión</a>
-                                    </li>
-                                    <li>
                                         <a href="../paginas/quienes-somos.html">Quienes somos</a>
                                     </li>
-                                    <!--<li>
-                                        <a href="../paginas/carrito.html"><img class="navbar_carrito" src="../imagenes/carrito.png" alt=""></a>
-                                    </li>-->
+                                    <li>
+                                        <a href="">Iniciar Sesión</a>
+                                    </li>
                                 </ul>
                             </div>
                             <div class="footer__info">
@@ -190,5 +145,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
     <!--NUESTRO JS-->
     <script src="../js/main.js"></script> 
+    <script src="../js/cheeseboard-1.js"></script>
+    <script src="../js/productos.json"></script> 
 </body>
 </html>
