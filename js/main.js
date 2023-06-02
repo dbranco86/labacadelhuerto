@@ -1,46 +1,3 @@
-/*
-//CONSTRUCTOR DE OBJETOS
-class Producto {
-    constructor(id, nombre, precio, cantidad, imagen, total) {
-        this.id = Number(id);
-        this.nombre  = nombre;
-        this.precio  = Number (precio);
-        this.cantidad = Number (cantidad);
-        this.imagen = imagen;
-        this.total = total;
-    }
-}
-
-//CREO OBJETOS
-const PRODUCTO_1 = new Producto ("1", "Cheese Board n°1", "100", "1", "./imagenes/Quesos1-carrito.png", "100");
-const PRODUCTO_2 = new Producto ("2", "Cheese Board n°2", "200", "1", "./imagenes/Quesos2-carrito.png", "200"); 
-const PRODUCTO_3 = new Producto ("3", "Cheese Board n°3", "300", "1", "./imagenes/Quesos3-carrito.png", "300");
-const PRODUCTO_4 = new Producto ("4", "Cheese Board n°4", "400", "1", "./imagenes/Quesos4-carrito.png", "400");
-const PRODUCTO_5 = new Producto ("5", "Cheese Box n°1", "100", "1", "./imagenes/Quesos1-carrito.png", "100");
-const PRODUCTO_6 = new Producto ("6", "Cheese Box n°2", "200", "1", "./imagenes/Quesos2-carrito.png", "200"); 
-const PRODUCTO_7 = new Producto ("7", "Cheese Box n°3", "300", "1", "./imagenes/Quesos3-carrito.png", "300");
-const PRODUCTO_8 = new Producto ("8", "Cheese Box n°4", "400", "1", "./imagenes/Quesos4-carrito.png", "400");
-const PRODUCTO_9 = new Producto ("9", "Mesa de Quesos n°1", "100", "1", "./imagenes/Quesos1-carrito.png", "100");
-const PRODUCTO_10 = new Producto ("10", "Mesa de Quesos n°2", "200", "1", "./imagenes/Quesos2-carrito.png", "200"); 
-const PRODUCTO_11= new Producto ("11", "Mesa de Quesos n°3", "300", "1", "./imagenes/Quesos3-carrito.png", "300");
-const PRODUCTO_12= new Producto ("12", "Mesa de Quesos n°4", "400", "1", "./imagenes/Quesos4-carrito.png", "400");
-
-//CREO ARRAY DE PRODUCTOS
-const productos = [
-    PRODUCTO_1,
-    PRODUCTO_2,
-    PRODUCTO_3,
-    PRODUCTO_4,
-    PRODUCTO_5,
-    PRODUCTO_6,
-    PRODUCTO_7,
-    PRODUCTO_8,
-    PRODUCTO_9,
-    PRODUCTO_10,
-    PRODUCTO_11,
-    PRODUCTO_12
-];*/
-
 //CREO ARRAY DE CARRITO
 let carrito = [];
 
@@ -52,8 +9,6 @@ const verCarrito = document.getElementById ("verCarrito");
 const contenidoCarrito = document.getElementById ("contenidoCarrito");
 const numerito = document.querySelector("#numerito");
 
-
-
 // CREANDO EVENTO PARA VER EL CARRITO
 verCarrito.addEventListener("click", () =>{    
     generarContenidoCarrito();
@@ -63,6 +18,20 @@ verCarrito.addEventListener("click", () =>{
 //FUNCION PARA GENERAR EL CONTENIDO DEL CARRITO
 const generarContenidoCarrito =() =>{
 contenidoCarrito.innerHTML = "";
+// Generar la sección del carrito una sola vez
+let seccionCarrito = document.createElement("section");
+seccionCarrito.id = "portada_carrito";
+seccionCarrito.innerHTML = `
+    <div class="row">
+    <div class="col-12 padding">
+    <h1 class="display-3 fw-bold text-center hero-title">La Baca del Huerto</h1>
+    </div>
+    <div class="col-12 padding">
+    <h2 class="display-3 fw-bold text-center hero-title">Carrito</h2>
+    </div>
+    </div>
+    `;
+contenidoCarrito.appendChild(seccionCarrito);
     carrito.forEach((tabla) =>{
         let contenido_carrito = document.createElement ("div");
         contenido_carrito.className = "container mt-5 table-responsive";
@@ -118,6 +87,7 @@ contenidoCarrito.innerHTML = "";
         botonAgregar.addEventListener("click", () => sumarCantidad(tabla.id));
     });
     actualizarNumerito();
+    
     //FUNCION PARA BOTONES + - 
     function restarCantidad(prodId) {
         const producto = carrito.find((tabla) => tabla.id === prodId);
@@ -167,6 +137,9 @@ contenidoCarrito.innerHTML = "";
     botonPagar.addEventListener("click", () => {
         alertaComprar();
     });
+    
+    // GUARDAR CAMBIOS EN EL LOCAL STORAGE
+    actualizarCarrito();
 }
 
 //FUNCION PARA ELIMINAR PRODUCTOS DEL CARRITO
@@ -188,12 +161,28 @@ window.addEventListener("load", () => {
         carrito = JSON.parse(carritoGuardado);
     }
     actualizarNumerito();
+    actualizarCarrito();
 });
 
+//FUNCION PARA TENER EL CARRITO
+function actualizarCarrito() {
+    localStorage.setItem("carrito", JSON.stringify(carrito));
+}
+
+//FUNCION PARA ACTUALIZAR EL NUMERITO DEL CARRITO
 function actualizarNumerito() {
     let nuevoNumerito = carrito.reduce((acc, prod) => acc + prod.cantidad, 0);
     numerito.innerText = nuevoNumerito;
 }
+//CREANDO EVENTO PARA CONTRAER EL NAVBAR CUANDO HACEN CLICK EN EL CARRITO
+document.addEventListener('DOMContentLoaded', function() {
+    var verCarrito = document.getElementById('verCarrito');
+    var navbarCollapse = document.getElementById('navbarSupportedContent');
+
+    verCarrito.addEventListener('click', function() {
+        navbarCollapse.classList.remove('show');
+    });
+});
 
 //ALERTAS
 //FUNCION PARA ALERTA DE BOTON AÑADIR
@@ -257,3 +246,4 @@ const alertaComprar = () => {
             }
         })
 }
+

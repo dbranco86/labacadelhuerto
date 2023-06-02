@@ -42,6 +42,7 @@ fetch('./js/productos.json')
                     });
                 }
                 actualizarNumerito();
+                actualizarCarrito();
             });
             //CREANDO EVENTO PARA VER LAS ALERTAS DEL BOTON AÑADIR
             boton_anadir.addEventListener("click", () => {
