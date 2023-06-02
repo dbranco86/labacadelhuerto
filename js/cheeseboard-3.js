@@ -12,7 +12,7 @@ fetch('../js/productos.json')
                     <div class="color-bg row  flex-wrap">
                         <div class="col-md-4 color-bg d-flex flex-column">
                             <div class="img">
-                                <img class="sombras" src="../imagenes/Quesos1.jpg" alt="">
+                                <img class="sombras" src="../imagenes/Quesos3.jpg" alt="">
                             </div>
                             <div role="button">
                                 <a href="../index.html">

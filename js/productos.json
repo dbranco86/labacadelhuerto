@@ -36,7 +36,7 @@
         "nombre": "Cheese Box n°1",
         "precio": 100,
         "cantidad": 1,
-        "imagen": "./imagenes/Quesos1-carrito.png",
+        "imagen": "./imagenes/Box1-carrito.png",
         "total": "100"
     },
     {
@@ -44,7 +44,7 @@
         "nombre": "Cheese Box n°2",
         "precio": 200,
         "cantidad": 1,
-        "imagen": "./imagenes/Quesos2-carrito.png",
+        "imagen": "./imagenes/Box2-carrito.png",
         "total": "200"
     },
     {
@@ -52,7 +52,7 @@
         "nombre": "Cheese Box n°3",
         "precio": 300,
         "cantidad": 1,
-        "imagen": "./imagenes/Quesos3-carrito.png",
+        "imagen": "./imagenes/Box3-carrito.png",
         "total": "300"
     },
     {
@@ -60,7 +60,7 @@
         "nombre": "Cheese Box n°4",
         "precio": 400,
         "cantidad": 1,
-        "imagen": "./imagenes/Quesos4-carrito.png",
+        "imagen": "./imagenes/Box4-carrito.png",
         "total": "400"
     },
     {
