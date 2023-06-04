@@ -68,7 +68,7 @@
         "nombre": "Mesa de Quesos n°1",
         "precio": 100,
         "cantidad": 1,
-        "imagen": "./imagenes/Quesos1-carrito.png",
+        "imagen": "./imagenes/Tabla1-carrito.png",
         "total": "100"
     },
     {
@@ -76,7 +76,7 @@
         "nombre": "Mesa de Quesos n°2",
         "precio": 200,
         "cantidad": 1,
-        "imagen": "./imagenes/Quesos2-carrito.png",
+        "imagen": "./imagenes/Tabla2-carrito.png",
         "total": "200"
     },
     {
@@ -84,7 +84,7 @@
         "nombre": "Mesa de Quesos n°3",
         "precio": 300,
         "cantidad": 1,
-        "imagen": "./imagenes/Quesos3-carrito.png",
+        "imagen": "./imagenes/Tabla3-carrito.png",
         "total": "300"
     },
     {
@@ -92,7 +92,7 @@
         "nombre": "Mesa de Quesos n°4",
         "precio": 400,
         "cantidad": 1,
-        "imagen": "./imagenes/Quesos4-carrito.png",
+        "imagen": "./imagenes/Tabla4-carrito.png",
         "total": "400"
     }
 ]

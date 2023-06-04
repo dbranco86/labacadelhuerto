@@ -18,7 +18,7 @@ verCarrito.addEventListener("click", () =>{
 //FUNCION PARA GENERAR EL CONTENIDO DEL CARRITO
 const generarContenidoCarrito =() =>{
 contenidoCarrito.innerHTML = "";
-// Generar la sección del carrito una sola vez
+//GENERAR LA SECCION DEL CARRITO UNA SOLA VEZ
 let seccionCarrito = document.createElement("section");
 seccionCarrito.id = "portada_carrito";
 seccionCarrito.innerHTML = `

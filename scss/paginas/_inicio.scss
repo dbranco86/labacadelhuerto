@@ -83,14 +83,11 @@
     .card_productos{    
         border-radius: 7px;
         @extend %tarjeta__producto;
-        transition: transform 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+        transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
     }
     .card_productos:hover {
-        transform: scale(1.1); 
+        transform: scale(1.1);
     } 
-    .card_productos:not(:hover) {
-        transform: scale(1); 
-    }
 }
 
 #section-4{
