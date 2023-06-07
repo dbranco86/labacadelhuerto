@@ -247,3 +247,6 @@ const alertaComprar = () => {
         })
 }
 
+
+
+

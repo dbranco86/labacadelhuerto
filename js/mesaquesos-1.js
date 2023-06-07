@@ -28,6 +28,7 @@ fetch('../js/productos.json')
                                         Descripción
                                     </h4>
                                     <p class="description-text fw-bold font">
+                                        Mesa para 5 personas. <br>
                                         3 Clases de Quesos. <br>
                                         2 clases de fiambres. <br>
                                         Fruta de estación. <br>

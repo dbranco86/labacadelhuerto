@@ -28,8 +28,9 @@ fetch('../js/productos.json')
                                         Descripción
                                     </h4>
                                     <p class="description-text fw-bold font">
-                                        3 Clases de Quesos. <br>
-                                        2 clases de fiambres. <br>
+                                        Mesa para 20 personas. <br>
+                                        7 Clases de Quesos. <br>
+                                        4 clases de fiambres. <br>
                                         Fruta de estación. <br>
                                         Panes. <br>
                                         Frutos secos. <br>
