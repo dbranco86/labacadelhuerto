@@ -55,4 +55,3 @@ fetch('./js/productos.json')
     console.error('Error al cargar el archivo JSON:', error);
     });
 
-
